@@ -16,11 +16,13 @@ Personalized online recommendations strive to adapt their services to individual
 ### 🌟Full Paper 
 If you want to read the full paper, plese click the following button👇🏻
 
-[![pdf](/workspaces/HaixiaHan.github.io/assets/media/icons/pdf.png)](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9564225)
+<!-- [![pdf](/HaixiaHan.github.io/assets/media/icons/pdf.png)](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9564225) -->
+<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9564225"><img src="../ISC/pdf.png" alt="pdf" width="40"></a>
 
-### Did you find this page helpful? Consider sharing it 🙌
+###  🙌 Consider Citing it
+If you find this work is interesting, please consider citing our work as follows:
 
-'''
+```
 @INPROCEEDINGS{9564225,
   author={Yan, Cairong and Han, Haixia and Wang, Zijian and Zhang, Yanting},
   booktitle={2021 IEEE 8th International Conference on Data Science and Advanced Analytics (DSAA)}, 
@@ -28,8 +30,4 @@ If you want to read the full paper, plese click the following button👇🏻
   year={2021},
   pages={1-8},
   doi={10.1109/DSAA53316.2021.9564225}}
-'''
-
-
-
-
+```

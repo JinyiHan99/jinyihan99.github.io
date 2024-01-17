@@ -40,26 +40,39 @@ education:
       institution: Donghua University
 # Social Networking
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
-profiles:
-  - icon: mail
-    url: haixiahan@stu.ecnu.edu.cn
-  - icon: github
-    url: https://github.com/haixiaHan99/
-  - icon: google-scholar
-    url: https://scholar.google.com/citations?user=user=r2NcI24AAAAJ&hl=zh-CN
+# profiles:
+#   - icon: at-symbol
+#       url: 'haixiahan@stu.ecnu.edu.cn'
+#       label: E-mail Me
+#     - icon: brands/x
+#       url: https://twitter.com/GetResearchDev
+#     - icon: brands/instagram
+#       url: https://www.instagram.com/
+#     - icon: brands/linkedin
+#       url: https://www.linkedin.com/
+#     # Link to a PDF of your resume/CV - upload it to `static/uploads/resume.pdf`
+#     - icon: academicons/cv
+#       url: uploads/resume.pdf
+#       label: Download my resume
+#     - icon: rss
+#       url: ./post/index.xml
+#       label: Subscribe to my blog via RSS feed
+
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 
 # Author's website URL
 website: ""
-
-
 ---
-
-I am Haixia Han(韩海霞), a first-year Ph.D. candidate at East China Normal University, Shanghai, China. I am advised by Prof [Yanghua Xiao](https://scholar.google.com/citations?user=odFW4FoAAAAJ&hl=en&oi=ao) at [Knowledge Works Lab](http://kw.fudan.edu.cn/) of Fudan University. 
+<div align="center">
+  <a href="mailto:haixiahan@stu.ecnu.edu.cn"><img src="./mail.png" alt="email" width="30"></a>
+  <a href="https://github.com/haixiaHan99/"><img src="./github.png" alt="github" width="30"></a>
+  <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&hl=en"><img src="./google-sholar.png" alt="scholar" width="30"></a>
+</div>
+[Yanghua Xiao](https://scholar.google.com/citations?user=odFW4FoAAAAJ&hl=en&oi=ao)[Knowledge Works Lab](http://kw.fudan.edu.cn/) 
+I am Haixia Han(韩海霞), a first-year Ph.D. candidate at East China Normal University, Shanghai, China. I am advised by Prof <a href="https://scholar.google.com/citations?user=odFW4FoAAAAJ&hl=en&oi=ao">Yanghua Xiao</a> at <a href="http://kw.fudan.edu.cn/">Knowledge Works Lab</a> of Fudan University. 
 
 During my master's studies, my research mainly focused on *Data Mining*, *Recommender Systems* and *Multi-armed Bandit*.
 
 Currently, I have a broad interest in Natural Language Processing, with a focus on Large Language Models and their capability boundaries. I am fascinated by the self-reflective capability of large language model and continuous learning in large language model.
-

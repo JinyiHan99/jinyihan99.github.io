@@ -7,9 +7,9 @@ main:
   - name: Home
     url: /
     weight: 10
-  - name: Topics
+  - name: Publications
     url: tags/
     weight: 20
-  - name: Uses
+  - name: Awards
     url: uses/
     weight: 30

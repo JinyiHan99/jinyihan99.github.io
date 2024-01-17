@@ -41,22 +41,23 @@ education:
 # Social Networking
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  - icon: envelope
-    icon_pack: fas
-    link: 'haixiahan@stu.ecnu.edu.cn'
-  - icon: github
-    icon_pack: fab
-    link: https://github.com/haixiaHan99/
-  - icon: google-scholar # Alternatively, use `google-scholar` icon from `ai` icon pack
-    icon_pack: ai
-    link: https://scholar.google.com/citations?user=user=r2NcI24AAAAJ&hl=zh-CN
+  # - icon: envelope
+  #   icon_pack: fas
+  #   link: 'haixiahan@stu.ecnu.edu.cn'
+  # - icon: github
+  #   icon_pack: fab
+  #   link: https://github.com/haixiaHan99/
+  # - icon: google-scholar # Alternatively, use `google-scholar` icon from `ai` icon pack
+  #   icon_pack: ai
+  #   link: https://scholar.google.com/citations?user=user=r2NcI24AAAAJ&hl=zh-CN
  
     # label: E-mail Me
-  # - icon: brands/x
-  #   url: https://twitter.com/GetResearchDev
-  # - icon: brands/github
-  #   url: https://github.com/haixiaHan99/
-  # -
+  - icon: mail
+    url: haixiahan@stu.ecnu.edu.cn
+  - icon: github
+    url: https://github.com/haixiaHan99/
+  - icon: google-scholar
+    url: https://scholar.google.com/citations?user=user=r2NcI24AAAAJ&hl=zh-CN
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
@@ -67,9 +68,9 @@ website: ""
 
 ---
 
-I am Haixia Han(韩海霞), a first-year Ph.D. candidate at East China Normal University, Shanghai, China. I am advised by Prof ![Yanghua Xiao](https://scholar.google.com/citations?user=odFW4FoAAAAJ&hl=en&oi=ao) at ![Knowledge Works Lab] (http://kw.fudan.edu.cn/) of Fudan University. 
+I am Haixia Han(韩海霞), a first-year Ph.D. candidate at East China Normal University, Shanghai, China. I am advised by Prof [Yanghua Xiao](https://scholar.google.com/citations?user=odFW4FoAAAAJ&hl=en&oi=ao) at [Knowledge Works Lab](http://kw.fudan.edu.cn/) of Fudan University. 
 
-During my master's studies, my research mainly focused on data mining, recommender systems and multi-armed bandit.
+During my master's studies, my research mainly focused on *Data Mining*, *Recommender Systems* and *Multi-armed Bandit*.
 
-Currently, I have a broad interest in Natural Language Processing, with a current focus on Large Language Models and their capability boundaries. I am fascinated by the self-reflective capability of large language model and continuous learning in large language model.
+Currently, I have a broad interest in Natural Language Processing, with a focus on Large Language Models and their capability boundaries. I am fascinated by the self-reflective capability of large language model and continuous learning in large language model.
 

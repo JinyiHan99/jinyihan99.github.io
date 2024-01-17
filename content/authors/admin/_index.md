@@ -43,7 +43,7 @@ education:
 profiles:
   - icon: mail
     url: haixiahan@stu.ecnu.edu.cn
-  - icon: /HaixiaHan.github.io/assets/media/icons/github.png
+  - icon: github
     url: https://github.com/haixiaHan99/
   - icon: google-scholar
     url: https://scholar.google.com/citations?user=user=r2NcI24AAAAJ&hl=zh-CN

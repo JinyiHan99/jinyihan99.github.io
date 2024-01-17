@@ -16,13 +16,7 @@ Contextual bandits efficiently solve the exploration and exploitation (EE) probl
 ![图](./xuhualu2.png "Fig. The workflow of a contextual bandit configured with TV-RM.")
 ### 🌟 Full Paper
 If you want to read the full paper, plese click the following button👇🏻
-<!-- - block: buttons
-    content:
-      buttons:
-        - title: PDF
-          icon: arxiv
-          url: https://link.springer.com/chapter/10.1007/978-3-031-30672-3_4 -->
-<!-- {{< cta cta_text="PDF" cta_link="https://link.springer.com/chapter/10.1007/978-3-031-30672-3_4" cta_new_tab="true" >}} -->
+
 [![pdf](/workspaces/HaixiaHan.github.io/assets/media/icons/pdf.png)](https://link.springer.com/chapter/10.1007/978-3-031-30672-3_4)
 
 ### Did you find this work helpful? Consider Citing it 🙌

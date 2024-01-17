@@ -41,20 +41,9 @@ education:
 # Social Networking
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
-  # - icon: envelope
-  #   icon_pack: fas
-  #   link: 'haixiahan@stu.ecnu.edu.cn'
-  # - icon: github
-  #   icon_pack: fab
-  #   link: https://github.com/haixiaHan99/
-  # - icon: google-scholar # Alternatively, use `google-scholar` icon from `ai` icon pack
-  #   icon_pack: ai
-  #   link: https://scholar.google.com/citations?user=user=r2NcI24AAAAJ&hl=zh-CN
- 
-    # label: E-mail Me
   - icon: mail
     url: haixiahan@stu.ecnu.edu.cn
-  - icon: github
+  - icon: /HaixiaHan.github.io/assets/media/icons/github.png
     url: https://github.com/haixiaHan99/
   - icon: google-scholar
     url: https://scholar.google.com/citations?user=user=r2NcI24AAAAJ&hl=zh-CN

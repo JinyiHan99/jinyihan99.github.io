@@ -22,10 +22,13 @@ If you want to read the full paper, plese click the following button👇🏻
         - title: PDF
           icon: arxiv
           url: https://www.sciencedirect.com/science/article/pii/S0950705122010206 -->
-{{< cta cta_text="PDF" cta_link="https://www.sciencedirect.com/science/article/pii/S0950705122010206" cta_new_tab="true" >}}
+<!-- {{< cta cta_text="PDF" cta_link="https://www.sciencedirect.com/science/article/pii/S0950705122010206" cta_new_tab="true" >}} -->
+[![pdf](/workspaces/HaixiaHan.github.io/assets/media/icons/pdf.png)](https://www.sciencedirect.com/science/article/pii/S0950705122010206)
+
 
 ### Did you find this work helpful? Consider Citing it 🙌
 If you find this work is interesting, please consider citing our work as follows:
+
 ```
 @article{yan2022dynamic,
   title={Dynamic clustering based contextual combinatorial multi-armed bandit for online recommendation},

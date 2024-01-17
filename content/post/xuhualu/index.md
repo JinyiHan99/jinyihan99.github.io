@@ -22,7 +22,8 @@ If you want to read the full paper, plese click the following button👇🏻
         - title: PDF
           icon: arxiv
           url: https://link.springer.com/chapter/10.1007/978-3-031-30672-3_4 -->
-{{< cta cta_text="PDF" cta_link="https://link.springer.com/chapter/10.1007/978-3-031-30672-3_4" cta_new_tab="true" >}}
+<!-- {{< cta cta_text="PDF" cta_link="https://link.springer.com/chapter/10.1007/978-3-031-30672-3_4" cta_new_tab="true" >}} -->
+[![pdf](/workspaces/HaixiaHan.github.io/assets/media/icons/pdf.png)](https://link.springer.com/chapter/10.1007/978-3-031-30672-3_4)
 
 ### Did you find this work helpful? Consider Citing it 🙌
 If you find this work is interesting, please consider citing our work as follow:

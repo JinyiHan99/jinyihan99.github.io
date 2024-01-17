@@ -17,8 +17,7 @@ Recommender systems still face a trade-off between exploring new items to maximi
 ### 🌟 Full Paper
 If you want to read the full paper, plese click the following button👇🏻
 
-
-<a href="https://www.sciencedirect.com/science/article/pii/S0950705122010206"><img src="../ISC/pdf.png" alt="ppt" width="40"></a>
+Paper PDF 👉：<a href="https://www.sciencedirect.com/science/article/pii/S0950705122010206"><img src="../ISC/pdf.png" alt="ppt" width="40"></a>
 
 ###  🙌 Consider Citing it
 If you find this work is interesting, please consider citing our work as follows:

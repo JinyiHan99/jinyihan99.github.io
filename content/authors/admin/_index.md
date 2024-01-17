@@ -65,10 +65,16 @@ highlight_name: true
 # Author's website URL
 website: ""
 ---
-<div align="center">
-  <a href="mailto:haixiahan@stu.ecnu.edu.cn"><img src="./mail.png" alt="email" width="30"></a>
+<!-- <div align="center">
+  <!-- <a href="mailto:haixiahan@stu.ecnu.edu.cn"><img src="./mail.png" alt="email" width="30"></a>
   <a href="https://github.com/haixiaHan99/"><img src="./github.png" alt="github" width="30"></a>
-  <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&hl=en"><img src="./google-sholar.png" alt="scholar" width="30"></a>
+  <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&hl=en"><img src="./google-sholar.png" alt="scholar" width="30"></a> 
+</div> -->
+
+<div style="text-align:center">
+    <a href="mailto:haixiahan@stu.ecnu.edu.cn"><img src="./mail.png" alt="email" width="30" style="display:inline-block"></a>
+    <a href="https://github.com/haixiaHan99/"><img src="./github.png" alt="github" width="30" style="display:inline-block"></a>
+    <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&hl=en"><img src="./google-scholar.png" alt="scholar" width="30" style="display:inline-block"></a>
 </div>
 [Yanghua Xiao](https://scholar.google.com/citations?user=odFW4FoAAAAJ&hl=en&oi=ao)[Knowledge Works Lab](http://kw.fudan.edu.cn/) 
 I am Haixia Han(韩海霞), a first-year Ph.D. candidate at East China Normal University, Shanghai, China. I am advised by Prof <a href="https://scholar.google.com/citations?user=odFW4FoAAAAJ&hl=en&oi=ao">Yanghua Xiao</a> at <a href="http://kw.fudan.edu.cn/">Knowledge Works Lab</a> of Fudan University. 

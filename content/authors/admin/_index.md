@@ -66,7 +66,7 @@ highlight_name: true
 website: ""
 ---
 <!-- <div align="center">
-  <!-- <a href="mailto:haixiahan@stu.ecnu.edu.cn"><img src="./mail.png" alt="email" width="30"></a>
+  <!-- <a href="mailto:haixiahan@stu.ecnu.edu.cn"><img src="https://github.com/haixiaHan99/haixiahan99.github.io/blob/main/mail.png" alt="email" width="30"></a>
   <a href="https://github.com/haixiaHan99/"><img src="./github.png" alt="github" width="30"></a>
   <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&hl=en"><img src="./google-sholar.png" alt="scholar" width="30"></a> 
 </div> -->

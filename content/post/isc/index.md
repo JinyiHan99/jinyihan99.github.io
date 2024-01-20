@@ -1,7 +1,7 @@
 ---
 title:  🤖️ Small Language Model Can Self-Correct
 summary: Proceedings of the 38th AAAI Conference on Artificial Intelligence (AAAI-24)
-date: 2024-01-16
+date: 2023-12-25
 authors:
   - Haixia Han, Jiaqing Liang, Jie Shi, Qianyu He, Yanghua Xiao
 # tags:

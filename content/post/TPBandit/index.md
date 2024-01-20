@@ -1,33 +1,35 @@
 ---
-title: 😬 Two-phase multi-armed bandit for online recommendation
-summary: 2021 IEEE 8th International Conference on Data Science and Advanced Analytics (DSAA 2021)
-date: 2021-10-06
+title: 🙇 Thompson Sampling with Time-Varying Reward for Contextual Bandits
+summary: International Conference on Database Systems for Advanced Applications (DASFAA 2023)
+date: 2024-01-17
 authors:
-  - Cairong Yan, Haixia Han, Zijian Wang, Yanting Zhang
+  - Cairong Yan, Hualu Xu, Haixia Han, Yanting Zhang, Zijian Wang
 # tags:
 #   - 
 #   - 
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 ---
-### 🌟Abstract
-Personalized online recommendations strive to adapt their services to individual users by making use of both item and user information. Despite recent progress, the issue of balancing exploitation-exploration (EE) remains challenging. In this paper, we model the personalized online recommendation of e-commence as a two-phase multi-armed bandit problem. This is the first time that “big arm” and “small arm” are introduced into multi-armed bandit (MAB), and a two-stage strategy is adopted to provide target users with the most suitable recommendation list. In the first phase, MAB is used to obtain an item subset that users may be interested in from a large number of items. We use item categories as arms instead of individual items in existing related models to control the arm scale and reduce computational complexity. In the second phase, we directly use the items generated in the first phase as arms of MAB and obtain rewards through fine-grained implicit feedback from users. Empirical studies on three real-world datasets show that our proposed method TPBandit performs better than state-of-the-art bandit-based recommendation methods in several evaluation metrics such as Precision, Recall, and Hit Ratio. Moreover, the two-phase method improves the recommendation performance by nearly 50% compared to the one-phase method in the best case.
+### 🌟 Abstract
+Contextual bandits efficiently solve the exploration and exploitation (EE) problem in online recommendation tasks. Most existing contextual bandit algorithms utilize a fixed reward mechanism, which makes it difficult to accurately capture the preference changes of users in non-stationary environments, thus affecting recommendation performance. In this paper, we formalize the online recommendation task as a contextual bandit problem and propose a Thompson sampling algorithm with time-varying reward (TV-TS) that captures user preference changes from three perspectives: (1) forgetting past preferences based on a functional decay method while capturing possible periodic demands, (2) mining fine-grained preference changes from multi-behavioral implicit feedback, and (3) iterating the reward weights adaptively. We also provide theoretical regret analysis to demonstrate the sublinearity of the algorithm. Extensive empirical experiments on two real-world datasets show that our proposed algorithm outperforms state-of-the-art time-varying bandit algorithms. Furthermore, the designed reward mechanism can be flexibly configured to other bandit algorithms to improve them.
 
-### 🌟Full Paper 
+![图](./xuhualu2.png "Fig. The workflow of a contextual bandit configured with TV-RM.")
+
+### 🌟 Full Paper
 If you want to read the full paper, plese click the following button👇🏻
 
-<!-- [![pdf](/HaixiaHan.github.io/assets/media/icons/pdf.png)](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9564225) -->
-Paper PDF 👉：<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9564225"><img src="../ISC/pdf.png" alt="pdf" width="40"></a>
+<p>Paper PDF 👉：<a href="https://link.springer.com/chapter/10.1007/978-3-031-30672-3_4"><img src="../isc/pdf.png" alt="pdf" width="40"></a></p>
 
 ###  🙌 Consider Citing it
-If you find this work is interesting, please consider citing our work as follows:
+If you find this work is interesting, please consider citing our work as follow:
 
 ```
-@INPROCEEDINGS{9564225,
-  author={Yan, Cairong and Han, Haixia and Wang, Zijian and Zhang, Yanting},
-  booktitle={2021 IEEE 8th International Conference on Data Science and Advanced Analytics (DSAA)}, 
-  title={Two-Phase Multi-armed Bandit for Online Recommendation}, 
-  year={2021},
-  pages={1-8},
-  doi={10.1109/DSAA53316.2021.9564225}}
+@inproceedings{yan2023thompson,
+  title={Thompson Sampling with Time-Varying Reward for Contextual Bandits},
+  author={Yan, Cairong and Xu, Hualu and Han, Haixia and Zhang, Yanting and Wang, Zijian},
+  booktitle={International Conference on Database Systems for Advanced Applications},
+  pages={54--63},
+  year={2023},
+  organization={Springer}
+}
 ```

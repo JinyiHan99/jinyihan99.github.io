@@ -1,12 +1,9 @@
 ---
 title: 🛍️ Dynamic clustering based contextual combinatorial multi-armed bandit for online recommendation
 summary: Knowledge-Based Systems（SCI-Q1, IF:8.8）
-date: 2022-12-05
+date: 2024-01-17
 authors:
   - Cairong Yan, Haixia Han, Yanting Zhang, Dandan Zhu, Yongquan Wan
-# tags:
-#   - 
-#   - 
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 ---
@@ -15,9 +12,8 @@ Recommender systems still face a trade-off between exploring new items to maximi
 
 ![图](./DC3MAB1.png "Fig. Model the personalized online recommendation task as a combinatorial bandit problem")
 ### 🌟 Full Paper
-If you want to read the full paper, plese click the following button👇🏻
 
-Paper PDF 👉：<a href="https://www.sciencedirect.com/science/article/pii/S0950705122010206"><img src="../ISC/pdf.png" alt="ppt" width="40"></a>
+<p>Paper PDF 👉：<a href="https://www.sciencedirect.com/science/article/pii/S0950705122010206"><img src="../ISC/pdf.png" alt="ppt" width="40"></a></p>
 
 ###  🙌 Consider Citing it
 If you find this work is interesting, please consider citing our work as follows:

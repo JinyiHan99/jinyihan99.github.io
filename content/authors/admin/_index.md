@@ -25,19 +25,19 @@ organizations:
     url: https://www.ecnu.edu.cn/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include self-reflective capability of large language model, exploring the capability boundary of large language model, and  continuous learning in large language model.
-interests:
-  - Instruction Following
-  - Creative Generation
-  - Large Language Models
+# bio: My research interests include self-reflective capability of large language model, exploring the capability boundary of large language model, and  continuous learning in large language model.
+# interests:
+#   - Instruction Following
+#   - Creative Generation
+#   - Large Language Models
 
-# Education to show in About widget
-education:
-  courses:
-    - course: PhD in CS, 2023-2027 (estimated)
-      institution: East China Normal University
-    - course: B.S. in CS, 2016-2023
-      institution: Donghua University
+# # Education to show in About widget
+# education:
+#   courses:
+#     - course: PhD in CS, 2023-2027 (estimated)
+#       institution: East China Normal University
+#     - course: B.S. in CS, 2016-2023
+#       institution: Donghua University
 # Social Networking
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 # profiles:
@@ -65,18 +65,12 @@ highlight_name: true
 # Author's website URL
 website: ""
 ---
-<!-- <div align="center">
-  <!-- <a href="mailto:haixiahan@stu.ecnu.edu.cn"><img src="https://github.com/haixiaHan99/haixiahan99.github.io/blob/main/mail.png" alt="email" width="30"></a>
-  <a href="https://github.com/haixiaHan99/"><img src="./github.png" alt="github" width="30"></a>
-  <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&hl=en"><img src="./google-sholar.png" alt="scholar" width="30"></a> 
-</div> -->
-
 <div style="text-align:center">
-    <a href="mailto:haixiahan@stu.ecnu.edu.cn"><img src="./mail.png" alt="email" width="30" style="display:inline-block"></a>
+    <a href="mailto:haixiahan@stu.ecnu.edu.cn"><img src="https://haixiahan99.github.io/github.png" alt="email" width="30" style="display:inline-block"></a>
     <a href="https://github.com/haixiaHan99/"><img src="./github.png" alt="github" width="30" style="display:inline-block"></a>
     <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&hl=en"><img src="./google-scholar.png" alt="scholar" width="30" style="display:inline-block"></a>
 </div>
-[Yanghua Xiao](https://scholar.google.com/citations?user=odFW4FoAAAAJ&hl=en&oi=ao)[Knowledge Works Lab](http://kw.fudan.edu.cn/) 
+<!-- [Yanghua Xiao](https://scholar.google.com/citations?user=odFW4FoAAAAJ&hl=en&oi=ao)[Knowledge Works Lab](http://kw.fudan.edu.cn/)  -->
 I am Haixia Han(韩海霞), a first-year Ph.D. candidate at East China Normal University, Shanghai, China. I am advised by Prof <a href="https://scholar.google.com/citations?user=odFW4FoAAAAJ&hl=en&oi=ao">Yanghua Xiao</a> at <a href="http://kw.fudan.edu.cn/">Knowledge Works Lab</a> of Fudan University. 
 
 During my master's studies, my research mainly focused on *Data Mining*, *Recommender Systems* and *Multi-armed Bandit*.

@@ -17,7 +17,7 @@ Contextual bandits efficiently solve the exploration and exploitation (EE) probl
 ### 🌟 Full Paper
 If you want to read the full paper, plese click the following button👇🏻
 
-Paper PDF 👉：<a href="https://link.springer.com/chapter/10.1007/978-3-031-30672-3_4"><img src="../isc/pdf.png" alt="pdf" width="40"></a>
+Paper PDF 👇：<a href="https://link.springer.com/chapter/10.1007/978-3-031-30672-3_4"><img src="../isc/pdf.png" alt="pdf" width="40"></a>
 
 ###  🙌 Consider Citing it
 If you find this work is interesting, please consider citing our work as follow:

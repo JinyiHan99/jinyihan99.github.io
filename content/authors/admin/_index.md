@@ -65,7 +65,7 @@ highlight_name: true
 # Author's website URL
 website: ""
 ---
-<div style="text-align:center">
+<div style="text-align:center;vertical-align: top;">
     <a href="mailto:haixiahan@stu.ecnu.edu.cn"><img src="uploads/mail.png" alt="email" width="30" style="display:inline-block"></a>
     <a href="https://github.com/haixiaHan99/"><img src="uploads/github.png" alt="github" width="30" style="display:inline-block"></a>
     <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&hl=en"><img src="uploads/google-scholar.png" alt="scholar" width="30" style="display:inline-block"></a>

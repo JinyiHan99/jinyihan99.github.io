@@ -17,7 +17,7 @@ Personalized online recommendations strive to adapt their services to individual
 <!-- If you want to read the full paper, plese click the following button👇🏻 -->
 
 <!-- [![pdf](/HaixiaHan.github.io/assets/media/icons/pdf.png)](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9564225) -->
-<p>Paper PDF 👇：<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9564225"><img src="../isc/pdf.png" alt="pdf" width="40"></a></p>
+- Paper PDF 👇：<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9564225"><img src="../isc/pdf.png" alt="pdf" width="40"></a>
 
 ###  🙌 Consider Citing it
 If you find this work is interesting, please consider citing our work as follows:

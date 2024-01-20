@@ -13,7 +13,7 @@ Recommender systems still face a trade-off between exploring new items to maximi
 ![图](./DC3MAB1.png "Fig. Model the personalized online recommendation task as a combinatorial bandit problem")
 ### 🌟 Full Paper
 
-<p>Paper PDF 👇：<a href="https://www.sciencedirect.com/science/article/pii/S0950705122010206"><img src="../isc/pdf.png" alt="ppt" width="40"></a></p>
+- Paper PDF 👇：<a href="https://www.sciencedirect.com/science/article/pii/S0950705122010206"><img src="../isc/pdf.png" alt="ppt" width="40"></a>
 
 ###  🙌 Consider Citing it
 If you find this work is interesting, please consider citing our work as follows:

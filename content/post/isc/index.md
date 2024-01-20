@@ -18,7 +18,7 @@ Generative Language Models (LMs) such as ChatGPT have exhibited remarkable perfo
 ### 🌟 Full Paper 
 
 <div align="center">
- <p> Paper PDF 👉： <a href="https://arxiv.org/abs/2401.07301"><img src="./pdf.png" alt="pdf" width="30"></a>
+ <span> Paper PDF 👉：</span> <a href="https://arxiv.org/abs/2401.07301"><img src="./pdf.png" alt="pdf" width="30">
  </p>
  <p> Paper PPT 👉：<a href="./10260_PPT.pdf"><img src="./ppt.png" alt="ppt" width="30"></a>
  </p>

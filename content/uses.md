@@ -15,6 +15,7 @@ authors:
   - 🏫 University: Donghua University
 
 ###  🎊 News
-- 👏 2023-03-01：Outstanding Academic Scholarship for Master Students
-- 👏 2023-02-20：Outstanding Master's Degree Thesis at Donghua University
-- 👏 2021-07-07: Outstanding Bachelor's Degree Thesis (Graduation Design) in Henan Province
+- 👏 Feb, 2023：Outstanding Master's Degree Thesis at Donghua University （10%）
+- 👏 Mar, 2023：Outstanding Graduate of Shanghai （1%）
+- 👏 Otc,2020- Otc,2022: Academic Scholarship First Prize（1%）
+- 👏 Jul, 2021: Outstanding Bachelor's Degree Thesis (Graduation Design) in Henan Province （1%）

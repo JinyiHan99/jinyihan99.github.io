@@ -75,4 +75,4 @@ I am Haixia Han(韩海霞), a first-year Ph.D. candidate at East China Normal Un
 
 During my master's studies, my research mainly focused on *Data Mining*, *Recommender Systems* and *Multi-armed Bandit*.
 
-Currently, I have a broad interest in Natural Language Processing, with a focus on Large Language Models and their capability boundaries. I am fascinated by the self-reflective capability of large language model and continuous learning in large language model.
+Currently, I have a broad interest in Natural Language Processing, with a focus on **Large Language Models capability enhancement, including self-awareness and continue evolution capility**.

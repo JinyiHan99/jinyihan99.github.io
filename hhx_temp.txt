@@ -55,20 +55,19 @@ def save_list_to_json(data, file_path):
 
 
 
+
 @torch.no_grad()
-def get_response(model, prompts, T, lora_weight, output_num):
+def get_response(model, prompts, T, lora_weight):
     generation_config = SamplingParams(
                 # temperature=0.5,
                 top_p=0.8,
                 top_k=50,
                 # frequency_penalty = 1.1,
                 max_tokens= 2048,
-                temperature = T,
-                n = output_num
+                temperature = T
         )
     with torch.no_grad():
         if lora_weight=="":
-            pdb.set_trace()
             outputs = model.generate(prompts,generation_config)
         else:
             outputs = model.generate(prompts,generation_config, lora_request=LoRARequest("lora weight", 1, lora_weight) )
@@ -76,15 +75,12 @@ def get_response(model, prompts, T, lora_weight, output_num):
     responses =[]
     for output in outputs:
         prompt = output.prompt
-        # single_response 表示一个prompt生成的output_num个答案
-        single_response = output.outputs
-        single_response_list = []
-        for i in range(len(single_response)):
-            response = single_response[i].text
-            response = response.replace('<s>', '').replace('<end>', '').replace('</s>', '').replace("<pad> ","")
-            single_response_list.append(response)
-        responses.append(single_response_list)
+        response = output.outputs[0].text
+        # pdb.set_trace()
+        response = response.replace('<s>', '').replace('<end>', '').replace('</s>', '').replace("<pad> ","")
+        responses.append(response)
     return prompt, responses
+ 
 
 def main(args):
     #1. load the model 

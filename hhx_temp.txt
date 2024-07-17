@@ -1,0 +1,142 @@
+import os, torch
+os.environ['CUDA_VISIBLE_DEVICES'] = "5"
+import requests
+import json
+import datetime
+# import gradio as gr
+import torch.nn as nn
+from peft import PeftModel
+import pdb
+import re
+
+
+from transformers import AutoModelWithLMHead, AutoTokenizer, GenerationConfig
+from transformers.generation.utils import LogitsProcessorList
+from transformers.generation.logits_process import NoBadWordsLogitsProcessor
+
+from transformers import AutoModelWithLMHead, T5Tokenizer, AutoTokenizer, LlamaForCausalLM, LlamaTokenizer
+import os
+
+from tqdm import tqdm
+import random
+import argparse
+import pdb
+from vllm import LLM, SamplingParams
+from vllm.lora.request import LoRARequest
+
+
+
+
+
+
+device = torch.device("cuda")
+
+
+def read_json(path):
+    with open(path, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+    return data
+
+
+        
+def read_json_line(path):
+    res = []
+    with open(path,"r") as file:
+        for line in file:
+            data = json.loads(line.strip())
+            res.append(data)
+    return res
+
+def save_list_to_json(data, file_path):
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
+
+
+
+
+
+@torch.no_grad()
+def get_response(model, prompts, T, lora_weight, output_num):
+    generation_config = SamplingParams(
+                # temperature=0.5,
+                top_p=0.8,
+                top_k=50,
+                # frequency_penalty = 1.1,
+                max_tokens= 2048,
+                temperature = T,
+                n = output_num
+        )
+    with torch.no_grad():
+        if lora_weight=="":
+            pdb.set_trace()
+            outputs = model.generate(prompts,generation_config)
+        else:
+            outputs = model.generate(prompts,generation_config, lora_request=LoRARequest("lora weight", 1, lora_weight) )
+            
+    responses =[]
+    for output in outputs:
+        prompt = output.prompt
+        # single_response 表示一个prompt生成的output_num个答案
+        single_response = output.outputs
+        single_response_list = []
+        for i in range(len(single_response)):
+            response = single_response[i].text
+            response = response.replace('<s>', '').replace('<end>', '').replace('</s>', '').replace("<pad> ","")
+            single_response_list.append(response)
+        responses.append(single_response_list)
+    return prompt, responses
+
+def main(args):
+    #1. load the model 
+    # 使用vllm 来加载模型
+    if args.lora_weight == "":
+        model = LLM(model=args.model_name, gpu_memory_utilization=0.9)
+    else:
+        model = LLM(model=args.model_name, gpu_memory_utilization=0.9, enable_lora=True)
+
+    print("!!!load the model successfully!")
+
+  
+    #2. read the data
+    # data = read_json(args.dataPath)
+    data = read_json_line(args.dataPath)
+    print(f"=========data path:{args.dataPath}")
+    print(f"!!!generateTemperaturList:{args.generateTemperaturList}")
+
+    for temp in args.generateTemperaturList:
+        generateTemperature = temp
+        save_data = []
+        savePath = args.savePath
+        size = 1
+        for i in tqdm(range(0, len(data), size)):
+            group = data[i: i+ size] # current examples
+            prompts = []
+            for example in group:
+                prompt = example['question']
+                prompts.append(prompt)
+            prompt, responses = get_response(model,prompts, generateTemperature,args.lora_weight)
+            pdb.set_trace()
+            for j in range(len(group)):
+                example = group[j]
+                response = responses[j]
+                example['response'] = response   
+                save_data.append(example)
+            # pdb.set_trace()
+            save_list_to_json(save_data, savePath)
+    print(f"Temperature:{temp} finished")   
+        
+
+
+if __name__ == "__main__":
+ 
+    parser = argparse.ArgumentParser()
+    # haixia Note: please revise the overall prompt according the task in generate_prompt funtction
+    parser.add_argument("--model_name", type=str, default="/data/cache/huggingface/hub/models--meta-llama--Llama-2-13b-hf/snapshots/638c8be6b16b6cb237274a65392c1045f7c4132c",
+                        help="the name of model")
+    parser.add_argument("--lora_weight", type = str, default="")
+    parser.add_argument("--dataPath", type=str, default="/data1/hhx/gsm_finetune/data/test.jsonl")
+    parser.add_argument("--savePath", type=str, default="")
+    parser.add_argument("--sample_num", type=int, default=1, help = "for a question, the number of answer.")
+    parser.add_argument("--generateTemperaturList", type=float, nargs = "+", help= "when the generation mode is constant, you must provide this parameter")
+    args = parser.parse_args()
+    main(args)

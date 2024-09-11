@@ -24,40 +24,6 @@ organizations:
   - name: East China Normal university
     url: https://www.ecnu.edu.cn/
 
-# Short bio (displayed in user profile at end of posts)
-# bio: My research interests include self-reflective capability of large language model, exploring the capability boundary of large language model, and  continuous learning in large language model.
-# interests:
-#   - Instruction Following
-#   - Creative Generation
-#   - Large Language Models
-
-# # Education to show in About widget
-# education:
-#   courses:
-#     - course: PhD in CS, 2023-2027 (estimated)
-#       institution: East China Normal University
-#     - course: B.S. in CS, 2016-2023
-#       institution: Donghua University
-# Social Networking
-# Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
-# profiles:
-#   - icon: at-symbol
-#       url: 'haixiahan@stu.ecnu.edu.cn'
-#       label: E-mail Me
-#     - icon: brands/x
-#       url: https://twitter.com/GetResearchDev
-#     - icon: brands/instagram
-#       url: https://www.instagram.com/
-#     - icon: brands/linkedin
-#       url: https://www.linkedin.com/
-#     # Link to a PDF of your resume/CV - upload it to `static/uploads/resume.pdf`
-#     - icon: academicons/cv
-#       url: uploads/resume.pdf
-#       label: Download my resume
-#     - icon: rss
-#       url: ./post/index.xml
-#       label: Subscribe to my blog via RSS feed
-
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true

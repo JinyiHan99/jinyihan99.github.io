@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jinyi Han</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #222;
+      line-height: 1.85;
+      font-size: 17.5px;
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 50px 28px 70px;
+      background: #fff;
+    }
+    a { color: #0366d6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1 { font-size: 2em; font-weight: 700; margin-bottom: 6px; color: #111; }
+    h1 .cn { font-weight: 400; font-size: 0.65em; color: #444; }
+    h2 { font-size: 1.3em; font-weight: 700; margin-top: 2.5em; margin-bottom: 0.7em; padding-bottom: 6px; border-bottom: 1px solid #e0e0e0; color: #111; }
+    h3 { font-size: 1.05em; font-weight: 600; margin-top: 1.6em; margin-bottom: 0.5em; color: #333; }
+    p { margin-bottom: 0.9em; }
+    ul { padding-left: 1.3em; margin-bottom: 1em; }
+    li { margin-bottom: 0.7em; }
+    em { color: #444; font-style: italic; }
+    strong { color: #000; }
+    hr { border: none; border-top: 1px solid #e8e8e8; margin: 2.5em 0; }
+    .header { display: flex; gap: 30px; align-items: flex-start; margin-bottom: 1.8em; }
+    .header img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
+    .header-info { flex: 1; }
+    .tagline { font-size: 1em; color: #333; margin-bottom: 0.35em; }
+    .links { font-size: 0.95em; margin-top: 10px; }
+    .links a { margin-right: 14px; }
+    .pub-item { margin-bottom: 1.1em; }
+    .pub-item .venue { font-weight: 700; color: #111; }
+    .pub-item .title { font-style: italic; color: #222; }
+    .pub-item .authors { font-size: 0.92em; color: #333; }
+    .pub-item .meta { font-size: 0.9em; color: #444; }
+    .section-note { font-size: 0.9em; color: #555; margin-bottom: 1.2em; }
+    @media (max-width: 600px) {
+      .header { flex-direction: column; align-items: center; text-align: center; }
+      .header img { width: 110px; height: 110px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <img src="images/profile.jpeg" alt="Jinyi Han">
+  <div class="header-info">
+    <h1>Jinyi Han <span class="cn">(韩槿一)</span></h1>
+    <p class="tagline">Ph.D. candidate @ <strong>East China Normal University</strong></p>
+    <p class="tagline">Research on LLMs: Agents, Reasoning, Post-Training</p>
+    <p class="tagline">📍 Shanghai, China</p>
+    <div class="links">
+      <a href="mailto:jinyihan099@gamil.com">📧 Email</a>
+      <a href="hjy_resume_202607.pdf">📄 CV</a>
+      <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&hl=en">🎓 Scholar</a>
+      <a href="https://github.com/jinyihan99"><svg height="16" width="16" viewBox="0 0 16 16" style="vertical-align: -2px; margin-right: 2px;"><path fill="#333" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg> GitHub</a>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<p>
+I am a third-year Ph.D. candidate at <strong>East China Normal University</strong>, working with <a href="https://scholar.google.com/citations?user=odFW4FoAAAAJ&hl=en&oi=ao">Prof. Yanghua Xiao</a> and <a href="https://lsdefine.github.io/">Dr. Jiaqing Liang</a> at <a href="http://kw.fudan.edu.cn/">Knowledge Works Lab</a> at <strong>Fudan University</strong>. 
+</p>
+
+<p>My research focuses on <strong>Large Language Models (LLMs)</strong>:</p>
+<ul>
+  <li><strong>Language Agents:</strong> Building agents with autonomous decision-making, continual learning, and long-horizon task execution capabilities, including self-evolution, skill distillation & reuse, agentic RL, and agent evaluation</li>
+  <li><strong>Reasoning Models:</strong> Enhancing complex reasoning and tool-use capabilities of LLMs, as well as reasoning efficiency optimization</li>
+  <li><strong>Post-Training:</strong> Exploring continual self-evolution, curriculum learning strategies, and reinforcement learning optimization to improve model performance</li>
+</ul>
+
+<h2>💼 Internships</h2>
+<ul>
+  <li><em>2026.05 - Present</em>, LLM Agent Researcher, <strong>Tencent TEG Hunyuan</strong> <strong style="color: #0366d6;">(Qing Yun Program)</strong></li>
+  <li><em>2025.07 - 2026.04</em>, Multimodal LLM Algorithm Engineer, <strong>ByteDance</strong> <strong style="color: #0366d6;">(Jin Dou Yun Program)</strong></li>
+  <li><em>2023.09 - 2025.06</em>, LLM Reasoning & Agent Researcher, <strong>Knowledge Works Lab, Fudan University</strong></li>
+</ul>
+
+<h2>🔥 News</h2>
+<ul>
+  <li><em>2026.05</em>: 🏅 Joined <strong>Tencent TEG Hunyuan</strong> as a summer research intern, working on LLM agent evaluation.</li>
+  <li><em>2026.05</em>: 🎉🎉 Two papers accepted at <strong>ACL 2026</strong> and one at <strong>ICML 2026</strong>!</li>
+  <li><em>2026.04</em>: 🌟 <a href="https://github.com/lsdefine/GenericAgent">GenericAgent</a> open-sourced with <strong>13K+ Stars</strong>! [<a href="https://arxiv.org/abs/2604.17091">Technical Report</a>]</li>
+  <li><em>2026.04</em>: 🇧🇷 Attending <strong>ICLR 2026</strong> in Rio de Janeiro, Brazil. Feel free to say hi!</li>
+  <li><em>2026.02</em>: 🎉🎉🎉 Three papers accepted at <strong>ICLR 2026</strong>!</li>
+  <li><em>2025.05</em>: 🎉 <em>CDS</em> accepted at <strong>ACL 2025</strong>.</li>
+  <li><em>2025.04</em>: Released autonomous tool learning for LLMs via RL. [<a href="https://mp.weixin.qq.com/s/hjPf68M5qciZBc3zczctYQ">Report</a>]</li>
+  <li><em>2025.02</em>: Released GRPO on <a href="https://github.com/lsdefine/simple_GRPO">GitHub</a>, <strong>1.6K Stars</strong>. [<a href="https://mp.weixin.qq.com/s/hFArGyWTRTkQIMeStg279w">Report</a>]</li>
+  <li><em>2025.01</em>: 🎉 <em>Think Thrice Before You Act</em> accepted at <strong>ICLR 2025</strong>.</li>
+  <li><em>2023.12</em>: 🎉 <em>Small Language Model Can Self-correct</em> accepted at <strong>AAAI 2024</strong>.</li>
+</ul>
+
+<h2>📝 Selected Publications</h2>
+<p class="section-note">Full list on <a href="https://scholar.google.com/">Google Scholar</a>. * Equal contribution. Formerly known as Haixia Han.</p>
+
+<h3>Language Agents</h3>
+
+<div class="pub-item">
+  <span class="venue">[Preprint]</span> <span class="title">GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization.</span><br>
+  <span class="authors">Jiaqing Liang, <strong>Jinyi Han</strong>, Weijia Li, Xinyi Wang, Zhoujia Zhang, Zishang Jiang, et al. 2026.</span><br>
+  <span class="meta">[<a href="https://github.com/lsdefine/GenericAgent">GitHub <strong>13K+ Stars</strong></a>] [<a href="https://arxiv.org/abs/2604.17091">Paper</a>]</span>
+</div>
+
+<div class="pub-item">
+  <span class="venue">[Under Review]</span> <span class="title">From Instruction Following to Skill Following: A Process-Oriented Benchmark for LLM Agents.</span><br>
+  <span class="authors"><strong>Jinyi Han</strong>, Yuanjian Xu, Ying Liao, Zhichao Hu, Yanghua Xiao. 2026. (@ Tencent Hunyuan)</span>
+</div>
+
+<div class="pub-item">
+  <span class="venue">[ICML 2026]</span> <span class="title">From Outcomes to Actions: Leveraging Hindsight for Long-Horizon Language Agent Training.</span><br>
+  <span class="authors">Zishang Jiang, Tingyun Li, <strong>Jinyi Han</strong>, Xinyi Wang, et al.</span>
+</div>
+
+<div class="pub-item">
+  <span class="venue">[ACL 2026]</span> <span class="title">SOPFlow: Compiling Standard Operating Procedures into Repairable Executable Workflows.</span><br>
+  <span class="authors">Ying Liao, Ying Huang, <strong>Jinyi Han</strong>, Siyuan He, Jiaqing Liang, Yanghua Xiao.</span>
+</div>
+
+<h3>Reasoning Models</h3>
+
+<div class="pub-item">
+  <span class="venue">[ICLR 2026]</span> <span class="title">A Stitch in Time Saves Nine: Proactive Self-Refinement for Language Models.</span><br>
+  <span class="authors"><strong>Jinyi Han</strong>, Xinyi Wang, Haiquan Zhao, Tingyun Li, et al.</span>
+</div>
+
+<div class="pub-item">
+  <span class="venue">[ICLR 2026]</span> <span class="title">Your Models Have Thought Enough: Training Large Reasoning Models to Stop Overthinking.</span><br>
+  <span class="authors"><strong>Jinyi Han</strong>, Ying Huang, Ying Liao, Haiquan Zhao, et al.</span>
+</div>
+
+<div class="pub-item">
+  <span class="venue">[Under Review]</span> <span class="title">Structured Reasoning for Large Language Models.</span><br>
+  <span class="authors"><strong>Jinyi Han</strong>, Zixiang Di, Zishang Jiang, et al. 2026. (@ ByteDance)</span>
+</div>
+
+<div class="pub-item">
+  <span class="venue">[AAAI 2024]</span> <span class="title">Small Language Model Can Self-correct.</span><br>
+  <span class="authors"><strong>Haixia Han</strong>, Jiaqing Liang, Jie Shi, Qianyu He, Yanghua Xiao.</span>
+</div>
+
+<div class="pub-item">
+  <span class="venue">[ICLR 2025]</span> <span class="title">Think Thrice Before You Act: Progressive Thought Refinement in Large Language Models.</span><br>
+  <span class="authors">Chengyu Du, <strong>Jinyi Han</strong>, Yizhou Ying, et al.</span>
+</div>
+
+<div class="pub-item">
+  <span class="venue">[ACL 2026]</span> <span class="title">ADaPT: Token-Level Decoupling for Efficient Large Reasoning Models.</span><br>
+  <span class="authors">Tingyun Li, Zishang Jiang, <strong>Jinyi Han</strong>, et al.</span>
+</div>
+
+<h3>Post-Training</h3>
+
+<div class="pub-item">
+  <span class="venue">[ICLR 2026]</span> <span class="title">Selective Expert Guidance for Effective and Diverse Exploration in Reinforcement Learning of LLMs.</span><br>
+  <span class="authors">Zishang Jiang, <strong>Jinyi Han</strong>, Tingyun Li, et al.</span>
+</div>
+
+<div class="pub-item">
+  <span class="venue">[ACL 2025]</span> <span class="title">CDS: Data Synthesis Method Guided by Cognitive Diagnosis Theory.</span><br>
+  <span class="authors">Haokun Zhao, <strong>Jinyi Han</strong>, Jiaqing Liang, et al.</span>
+</div>
+
+<div class="pub-item">
+  <span class="venue">[AAAI 2025, Oral]</span> <span class="title">Difficulty Is Not Enough: Curriculum Learning for LLMs Fine-tuning Must Consider Utility.</span><br>
+  <span class="authors">Zishang Jiang, <strong>Jinyi Han</strong>, Tingyun Li, et al.</span>
+</div>
+
+<div class="pub-item">
+  <span class="venue">[Under Review]</span> <span class="title">Not All Negative Samples Are Equal: LLMs Learn Better from Plausible Reasoning.</span><br>
+  <span class="authors">Zixiang Di*, <strong>Jinyi Han</strong>*, et al. 2026. (@ ByteDance)</span>
+</div>
+
+<div class="pub-item">
+  <span class="venue">[ACL 2026]</span> <span class="title">Don't Tell the Answer, Truly Guide the Reasoning During RL Rollouts.</span><br>
+  <span class="authors">Xinyi Wang, <strong>Jinyi Han</strong>, Zishang Jiang, et al.</span>
+</div>
+
+<div class="pub-item">
+  <span class="venue">[Under Review]</span> <span class="title">Knowing How Certain It Is: Confidence Estimation Throughout LLM Generation.</span><br>
+  <span class="authors"><strong>Jinyi Han</strong>, Tingyun Li, Shisong Chen, et al. 2026.</span>
+</div>
+
+<h2>📂 Projects</h2>
+<ul>
+  <li><strong>GenericAgent</strong> · Self-evolving LLM Agent, <strong>13K+ Stars</strong> · [<a href="https://github.com/lsdefine/GenericAgent">GitHub</a>] [<a href="https://arxiv.org/abs/2604.17091">Paper</a>]</li>
+  <li><strong>Autonomous Tool Learning for LLMs</strong> · RL-based proactive tool-use · [<a href="https://mp.weixin.qq.com/s/hjPf68M5qciZBc3zczctYQ">Report</a>]</li>
+  <li><strong>R1-Zero Reproduction (GRPO)</strong> · <strong>1.6K Stars</strong> · [<a href="https://mp.weixin.qq.com/s/hFArGyWTRTkQIMeStg279w">Report</a>] [<a href="https://github.com/lsdefine/simple_GRPO">GitHub</a>]</li>
+</ul>
+
+<h2>🎓 Educations</h2>
+<ul>
+  <li><em>2023.09 - 2027.06 (Expected)</em>, Ph.D. in Computer Science, <strong>East China Normal University</strong> (Joint w/ Fudan)</li>
+  <li><em>2020.09 - 2023.03</em>, M.S. in Computer Science, <strong>Donghua University</strong></li>
+  <li><em>2016.09 - 2020.06</em>, B.S. in Computer Science, <strong>Henan University of Economics and Law</strong></li>
+</ul>
+
+
+
+<h2>🏆 Honors and Awards</h2>
+<ul>
+  <li><em>2024, 2025</em> Huawei Spark Award</li>
+  <li><em>2023</em> Outstanding Graduate of Shanghai (Top 5%)</li>
+  <li><em>2023</em> Outstanding Master's Thesis, Donghua University (Top 3%)</li>
+  <li><em>2021</em> Outstanding Bachelor's Thesis, Henan Province (Top 3%)</li>
+  <li><em>2020 - 2022</em> Academic Scholarship First Prize</li>
+</ul>
+
+<hr>
+<p style="text-align: center; font-size: 0.9em; color: #666;">© 2026 Jinyi Han</p>
+
+</body>
+</html>

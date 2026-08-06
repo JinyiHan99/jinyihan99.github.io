@@ -65,16 +65,9 @@
     .site-nav {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       gap: 24px;
       height: 52px;
-    }
-
-    .brand {
-      color: var(--ink);
-      font-size: 0.86rem;
-      font-weight: 720;
-      letter-spacing: 0.015em;
     }
 
     .site-nav nav {
@@ -101,7 +94,7 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) 122px;
       gap: 36px;
-      align-items: start;
+      align-items: center;
       padding: 34px 0 27px;
     }
 
@@ -141,8 +134,19 @@
     }
 
     .research-line {
-      margin: 0 0 13px;
+      margin: 0 0 6px;
       color: var(--text);
+    }
+
+    .talent-line {
+      margin: 0 0 13px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .talent-line strong {
+      color: var(--venue);
+      font-weight: 680;
     }
 
     .profile-links {
@@ -157,7 +161,8 @@
       display: block;
       width: 122px;
       height: auto;
-      margin-top: 2px;
+      margin-left: auto;
+      justify-self: end;
       border-radius: 4px;
       filter: saturate(0.94);
     }
@@ -567,6 +572,8 @@
       .portrait {
         grid-row: 1;
         width: 92px;
+        margin-left: 0;
+        justify-self: start;
       }
 
       .news li {
@@ -593,11 +600,10 @@
 </head>
 <body>
   <header class="site-nav">
-    <a class="brand" href="#top">Jinyi Han</a>
     <nav aria-label="Primary navigation">
+      <a href="#internships">Experience</a>
       <a href="#news">News</a>
       <a href="#publications">Publications</a>
-      <a href="#internships">Experience</a>
       <a href="#background">Background</a>
     </nav>
   </header>
@@ -609,6 +615,7 @@
         <p class="role">Ph.D. candidate at East China Normal University · Shanghai, China</p>
         <p class="intro">I am a third-year Ph.D. candidate advised by <a href="https://scholar.google.com/citations?user=odFW4FoAAAAJ&amp;hl=en&amp;oi=ao">Prof. Yanghua Xiao</a>. I also work with <a href="https://lsdefine.github.io/">Dr. Jiaqing Liang</a> at the <a href="http://kw.fudan.edu.cn/">Knowledge Works Lab</a>, Fudan University.</p>
         <p class="research-line">My research focuses on <strong>language agents</strong>, <strong>reasoning models</strong>, and <strong>LLM post-training</strong>, with an emphasis on self-evolution, tool use, reasoning efficiency, and reinforcement learning.</p>
+        <p class="talent-line">Selected for <strong>Tencent 2026 Project UP</strong> and the <strong>ByteDance Soaring Star Talent Program</strong>.</p>
         <div class="profile-links" aria-label="Profile links">
           <a href="mailto:jinyihan099@gmail.com">Email</a>
           <a href="hjy_resume_202607.pdf">CV</a>
@@ -617,6 +624,44 @@
         </div>
       </div>
       <img class="portrait" src="images/new_profile.jpg" alt="Portrait of Jinyi Han" width="122" height="163">
+    </section>
+
+    <section id="internships" aria-labelledby="internships-title">
+      <div class="section-head">
+        <h2 id="internships-title">Internships</h2>
+      </div>
+      <div class="internship-list">
+        <article class="internship">
+          <div class="company-logo">
+            <img src="images/tencent.png" alt="Tencent logo" width="268" height="52">
+          </div>
+          <div>
+            <h3>LLM Agent Researcher</h3>
+            <p class="company">Tencent TEG Hunyuan · <span class="program">Tencent 2026 Project UP</span></p>
+          </div>
+          <div class="period">May 2026 - Present</div>
+        </article>
+        <article class="internship">
+          <div class="company-logo">
+            <img src="images/bytedance.png" alt="ByteDance logo" width="196" height="64">
+          </div>
+          <div>
+            <h3>Multimodal LLM Algorithm Engineer</h3>
+            <p class="company">ByteDance · <span class="program">ByteDance Soaring Star Talent Program</span></p>
+          </div>
+          <div class="period">Jul 2025 - Apr 2026</div>
+        </article>
+        <article class="internship">
+          <div class="company-logo kw">
+            <img src="images/knowledge-works.png" alt="Knowledge Works Lab logo" width="72" height="76">
+          </div>
+          <div>
+            <h3>LLM Reasoning &amp; Agent Researcher</h3>
+            <p class="company">Knowledge Works Lab · Fudan University</p>
+          </div>
+          <div class="period">Sep 2023 - Present</div>
+        </article>
+      </div>
     </section>
 
     <section id="news" aria-labelledby="news-title">
@@ -679,6 +724,20 @@
               <p class="authors"><strong>Jinyi Han*</strong>, Yuanjian Xu*, Ying Liao, Xinyi Wang, Zishang Jiang, Zixiang Di, Fanyang Lu, Zhichao Hu, Yanghua Xiao</p>
               <p class="contribution"><strong>Key contribution.</strong> Introduces SKILL-USE, a benchmark of 79 real skills and 177 executable tasks that evaluates Trigger, Compliance, and Boundary under progressive disclosure.
                 <span class="paper-links"><a href="https://arxiv.org/abs/2608.04828">Paper</a><a href="https://github.com/JinyiHan99/Skill-Use-Bench">Code</a></span>
+              </p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <div class="venue">
+              <span>Preprint</span>
+              <small>2026</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2602.03516">Not All Negative Samples Are Equal: LLMs Learn Better from Plausible Reasoning</a></h3>
+              <p class="authors">Zixiang Di*, <strong>Jinyi Han*</strong>, Shuo Zhang, Ying Liao, Zhi Li, Xiaofeng Ji, et al.</p>
+              <p class="contribution"><strong>Key contribution.</strong> Synthesizes plausible but ultimately incorrect reasoning traces as higher-quality negative data for preference optimization.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2602.03516">Paper</a></span>
               </p>
             </div>
           </article>
@@ -774,20 +833,6 @@
 
           <article class="publication">
             <div class="venue">
-              <span>Preprint</span>
-              <small>2026</small>
-            </div>
-            <div>
-              <h3 class="paper-title"><a href="https://arxiv.org/abs/2602.03516">Not All Negative Samples Are Equal: LLMs Learn Better from Plausible Reasoning</a></h3>
-              <p class="authors">Zixiang Di, <strong>Jinyi Han</strong>, Shuo Zhang, Ying Liao, Zhi Li, Xiaofeng Ji, et al.</p>
-              <p class="contribution"><strong>Key contribution.</strong> Synthesizes plausible but ultimately incorrect reasoning traces as higher-quality negative data for preference optimization.
-                <span class="paper-links"><a href="https://arxiv.org/abs/2602.03516">Paper</a></span>
-              </p>
-            </div>
-          </article>
-
-          <article class="publication">
-            <div class="venue">
               <span>ACL 2026</span>
               <small>2025</small>
             </div>
@@ -859,44 +904,6 @@
       </div>
 
       <p class="publication-footnote">* Equal contribution. Only selected first- and second-author work is shown. See the <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&amp;hl=en">full publication list</a>.</p>
-    </section>
-
-    <section id="internships" aria-labelledby="internships-title">
-      <div class="section-head">
-        <h2 id="internships-title">Internships</h2>
-      </div>
-      <div class="internship-list">
-        <article class="internship">
-          <div class="company-logo">
-            <img src="images/tencent.png" alt="Tencent logo" width="268" height="52">
-          </div>
-          <div>
-            <h3>LLM Agent Researcher</h3>
-            <p class="company">Tencent TEG Hunyuan · <span class="program">Qing Yun Program</span></p>
-          </div>
-          <div class="period">May 2026 - Present</div>
-        </article>
-        <article class="internship">
-          <div class="company-logo">
-            <img src="images/bytedance.png" alt="ByteDance logo" width="196" height="64">
-          </div>
-          <div>
-            <h3>Multimodal LLM Algorithm Engineer</h3>
-            <p class="company">ByteDance · <span class="program">Jin Dou Yun Program</span></p>
-          </div>
-          <div class="period">Jul 2025 - Apr 2026</div>
-        </article>
-        <article class="internship">
-          <div class="company-logo kw">
-            <img src="images/knowledge-works.png" alt="Knowledge Works Lab logo" width="72" height="76">
-          </div>
-          <div>
-            <h3>LLM Reasoning &amp; Agent Researcher</h3>
-            <p class="company">Knowledge Works Lab · Fudan University</p>
-          </div>
-          <div class="period">Sep 2023 - Present</div>
-        </article>
-      </div>
     </section>
 
     <section id="projects" aria-labelledby="projects-title">

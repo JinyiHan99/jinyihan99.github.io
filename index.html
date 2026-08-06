@@ -1,220 +1,965 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jinyi Han - Ph.D. candidate researching language agents, reasoning models, and LLM post-training.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="images/new_profile.jpg">
   <title>Jinyi Han</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      color: #222;
-      line-height: 1.85;
-      font-size: 17.5px;
-      max-width: 840px;
-      margin: 0 auto;
-      padding: 50px 28px 70px;
-      background: #fff;
+    :root {
+      --ink: #1d232c;
+      --text: #38414d;
+      --muted: #6b7480;
+      --faint: #929aa5;
+      --accent: #2f67a6;
+      --accent-dark: #214e80;
+      --venue: #9b3b3b;
     }
-    a { color: #0366d6; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    h1 { font-size: 2em; font-weight: 700; margin-bottom: 6px; color: #111; }
-    h1 .cn { font-weight: 400; font-size: 0.65em; color: #444; }
-    h2 { font-size: 1.3em; font-weight: 700; margin-top: 2.5em; margin-bottom: 0.7em; padding-bottom: 6px; border-bottom: 1px solid #e0e0e0; color: #111; }
-    h3 { font-size: 1.05em; font-weight: 600; margin-top: 1.6em; margin-bottom: 0.5em; color: #333; }
-    p { margin-bottom: 0.9em; }
-    ul { padding-left: 1.3em; margin-bottom: 1em; }
-    li { margin-bottom: 0.7em; }
-    em { color: #444; font-style: italic; }
-    strong { color: #000; }
-    hr { border: none; border-top: 1px solid #e8e8e8; margin: 2.5em 0; }
-    .header { display: flex; gap: 30px; align-items: flex-start; margin-bottom: 1.8em; }
-    .header img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-    .header-info { flex: 1; }
-    .tagline { font-size: 1em; color: #333; margin-bottom: 0.35em; }
-    .links { font-size: 0.95em; margin-top: 10px; }
-    .links a { margin-right: 14px; }
-    .pub-item { margin-bottom: 1.1em; }
-    .pub-item .venue { font-weight: 700; color: #111; }
-    .pub-item .title { font-style: italic; color: #222; }
-    .pub-item .authors { font-size: 0.92em; color: #333; }
-    .pub-item .meta { font-size: 0.9em; color: #444; }
-    .section-note { font-size: 0.9em; color: #555; margin-bottom: 1.2em; }
-    @media (max-width: 600px) {
-      .header { flex-direction: column; align-items: center; text-align: center; }
-      .header img { width: 110px; height: 110px; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+        Arial, "PingFang SC", "Hiragino Sans GB", sans-serif;
+      font-size: 14.5px;
+      line-height: 1.56;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 2px solid rgba(47, 103, 166, 0.28);
+      outline-offset: 3px;
+    }
+
+    .site-nav,
+    main,
+    footer {
+      width: min(980px, calc(100% - 36px));
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      height: 52px;
+    }
+
+    .brand {
+      color: var(--ink);
+      font-size: 0.86rem;
+      font-weight: 720;
+      letter-spacing: 0.015em;
+    }
+
+    .site-nav nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .site-nav nav a {
+      color: var(--muted);
+      font-size: 0.76rem;
+      font-weight: 620;
+    }
+
+    .site-nav nav a:hover {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    main {
+      padding-bottom: 24px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 122px;
+      gap: 36px;
+      align-items: start;
+      padding: 34px 0 27px;
+    }
+
+    .hero h1 {
+      margin: 0 0 6px;
+      color: var(--ink);
+      font-size: clamp(2rem, 4vw, 2.65rem);
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    .hero h1 span {
+      color: var(--muted);
+      font-size: 0.47em;
+      font-weight: 520;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .role {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 520;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 0 0 9px;
+      color: var(--text);
+    }
+
+    .intro strong,
+    .research-line strong {
+      color: var(--ink);
+      font-weight: 690;
+    }
+
+    .research-line {
+      margin: 0 0 13px;
+      color: var(--text);
+    }
+
+    .profile-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px 16px;
+      font-size: 0.82rem;
+      font-weight: 620;
+    }
+
+    .portrait {
+      display: block;
+      width: 122px;
+      height: auto;
+      margin-top: 2px;
+      border-radius: 4px;
+      filter: saturate(0.94);
+    }
+
+    section {
+      padding: 25px 0 3px;
+      scroll-margin-top: 24px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 13px;
+    }
+
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      color: var(--ink);
+      font-size: 1.15rem;
+      font-weight: 720;
+      letter-spacing: -0.02em;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--faint);
+      font-size: 0.73rem;
+    }
+
+    .internship {
+      display: grid;
+      grid-template-columns: 115px minmax(0, 1fr) 128px;
+      gap: 18px;
+      align-items: center;
+      min-height: 61px;
+      padding: 7px 0;
+    }
+
+    .company-logo {
+      display: flex;
+      align-items: center;
+      min-height: 38px;
+    }
+
+    .company-logo img {
+      display: block;
+      max-width: 100px;
+      max-height: 36px;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    .company-logo.kw img {
+      max-width: 38px;
+      max-height: 40px;
+    }
+
+    .internship h3 {
+      margin: 0 0 2px;
+      color: var(--ink);
+      font-size: 0.88rem;
+      font-weight: 680;
+      line-height: 1.45;
+    }
+
+    .company {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.77rem;
+    }
+
+    .program {
+      color: var(--accent);
+      font-weight: 620;
+    }
+
+    .period {
+      color: var(--muted);
+      font-size: 0.73rem;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .news {
+      display: grid;
+      gap: 5px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .news li {
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr);
+      gap: 15px;
+      align-items: start;
+    }
+
+    .news time {
+      padding-top: 1px;
+      color: var(--muted);
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 0.7rem;
+      white-space: nowrap;
+    }
+
+    .news p {
+      margin: 0;
+      color: var(--text);
+      font-size: 0.83rem;
+      line-height: 1.48;
+    }
+
+    .news strong {
+      color: var(--ink);
+      font-weight: 680;
+    }
+
+    .pub-group + .pub-group {
+      margin-top: 24px;
+    }
+
+    .pub-group-title {
+      margin: 0 0 3px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 760;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .publication {
+      display: grid;
+      grid-template-columns: 94px minmax(0, 1fr);
+      gap: 14px;
+      padding: 10px 0 11px;
+    }
+
+    .venue {
+      padding-top: 2px;
+    }
+
+    .venue span {
+      display: inline-block;
+      padding: 0;
+      color: var(--venue);
+      font-size: 0.7rem;
+      font-weight: 720;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    .venue small {
+      display: block;
+      margin-top: 2px;
+      color: var(--faint);
+      font-size: 0.65rem;
+    }
+
+    .paper-title {
+      margin: 0 0 2px;
+      font-family: Georgia, "Times New Roman", "Songti SC", serif;
+      font-size: 0.91rem;
+      font-weight: 700;
+      line-height: 1.42;
+    }
+
+    .paper-title a {
+      color: var(--ink);
+    }
+
+    .paper-title a:hover {
+      color: var(--accent-dark);
+    }
+
+    .authors {
+      margin: 0 0 4px;
+      color: var(--muted);
+      font-size: 0.71rem;
+      line-height: 1.45;
+    }
+
+    .authors strong {
+      color: var(--ink);
+      font-weight: 720;
+    }
+
+    .contribution {
+      margin: 0;
+      color: #505a66;
+      font-size: 0.76rem;
+      line-height: 1.46;
+    }
+
+    .contribution strong {
+      color: var(--accent-dark);
+      font-size: 0.7rem;
+      font-weight: 740;
+    }
+
+    .paper-links {
+      display: inline-flex;
+      gap: 10px;
+      margin-left: 6px;
+      font-size: 0.7rem;
+      font-weight: 650;
+    }
+
+    .paper-links a {
+      white-space: nowrap;
+    }
+
+    .publication-footnote {
+      margin: 9px 0 0;
+      color: var(--faint);
+      font-size: 0.7rem;
+    }
+
+    .project-list,
+    .plain-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .project-list li {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: baseline;
+      padding: 5px 0;
+      font-size: 0.78rem;
+    }
+
+    .project-list strong {
+      color: var(--ink);
+      font-size: 0.83rem;
+    }
+
+    .project-list span {
+      color: var(--muted);
+    }
+
+    .project-list a {
+      font-size: 0.72rem;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    .background-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 42px;
+    }
+
+    .background-grid h3 {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .plain-list {
+      display: grid;
+      gap: 7px;
+    }
+
+    .plain-list li {
+      color: var(--text);
+      font-size: 0.77rem;
+      line-height: 1.45;
+    }
+
+    .plain-list strong {
+      display: block;
+      color: var(--ink);
+      font-size: 0.8rem;
+      font-weight: 670;
+    }
+
+    .plain-list span {
+      color: var(--muted);
+      font-size: 0.71rem;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 22px 0 28px;
+      color: var(--faint);
+      font-size: 0.68rem;
+    }
+
+    @media (max-width: 720px) {
+      .site-nav,
+      main,
+      footer {
+        width: min(100% - 26px, 980px);
+      }
+
+      .site-nav nav {
+        gap: 14px;
+      }
+
+      .site-nav nav a:nth-child(n+4) {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: minmax(0, 1fr) 96px;
+        gap: 22px;
+        padding: 30px 0 25px;
+      }
+
+      .portrait {
+        width: 96px;
+      }
+
+      section {
+        padding-top: 23px;
+      }
+
+      .section-head {
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      .section-note {
+        margin-top: 4px;
+      }
+
+      .internship {
+        grid-template-columns: 88px minmax(0, 1fr);
+        gap: 16px;
+      }
+
+      .company-logo img {
+        max-width: 78px;
+        max-height: 34px;
+      }
+
+      .company-logo.kw img {
+        max-width: 36px;
+        max-height: 38px;
+      }
+
+      .period {
+        grid-column: 2;
+        margin-top: -8px;
+        text-align: left;
+      }
+
+      .publication {
+        grid-template-columns: 1fr;
+        gap: 9px;
+      }
+
+      .venue {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .venue small {
+        display: inline;
+        margin: 0;
+      }
+
+      .project-list li {
+        grid-template-columns: 1fr auto;
+        gap: 3px 12px;
+      }
+
+      .project-list span {
+        grid-column: 1 / -1;
+      }
+
+      .background-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      body {
+        font-size: 15px;
+      }
+
+      .site-nav nav a:nth-child(n+3) {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .portrait {
+        grid-row: 1;
+        width: 92px;
+      }
+
+      .news li {
+        grid-template-columns: 74px minmax(0, 1fr);
+        gap: 12px;
+      }
+
+      footer {
+        display: block;
+        text-align: center;
+      }
+
+      footer span {
+        display: block;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
     }
   </style>
 </head>
 <body>
+  <header class="site-nav">
+    <a class="brand" href="#top">Jinyi Han</a>
+    <nav aria-label="Primary navigation">
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#internships">Experience</a>
+      <a href="#background">Background</a>
+    </nav>
+  </header>
 
-<div class="header">
-  <img src="images/profile.jpeg" alt="Jinyi Han">
-  <div class="header-info">
-    <h1>Jinyi Han <span class="cn">(韩槿一)</span></h1>
-    <p class="tagline">Ph.D. candidate @ <strong>East China Normal University</strong></p>
-    <p class="tagline">Research on LLMs: Agents, Reasoning, Post-Training</p>
-    <p class="tagline">📍 Shanghai, China</p>
-    <div class="links">
-      <a href="mailto:jinyihan099@gamil.com">📧 Email</a>
-      <a href="hjy_resume_202607.pdf">📄 CV</a>
-      <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&hl=en">🎓 Scholar</a>
-      <a href="https://github.com/jinyihan99"><svg height="16" width="16" viewBox="0 0 16 16" style="vertical-align: -2px; margin-right: 2px;"><path fill="#333" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg> GitHub</a>
-    </div>
-  </div>
-</div>
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <h1 id="page-title">Jinyi Han <span>韩槿一</span></h1>
+        <p class="role">Ph.D. candidate at East China Normal University · Shanghai, China</p>
+        <p class="intro">I am a third-year Ph.D. candidate advised by <a href="https://scholar.google.com/citations?user=odFW4FoAAAAJ&amp;hl=en&amp;oi=ao">Prof. Yanghua Xiao</a>. I also work with <a href="https://lsdefine.github.io/">Dr. Jiaqing Liang</a> at the <a href="http://kw.fudan.edu.cn/">Knowledge Works Lab</a>, Fudan University.</p>
+        <p class="research-line">My research focuses on <strong>language agents</strong>, <strong>reasoning models</strong>, and <strong>LLM post-training</strong>, with an emphasis on self-evolution, tool use, reasoning efficiency, and reinforcement learning.</p>
+        <div class="profile-links" aria-label="Profile links">
+          <a href="mailto:jinyihan099@gmail.com">Email</a>
+          <a href="hjy_resume_202607.pdf">CV</a>
+          <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&amp;hl=en">Google Scholar</a>
+          <a href="https://github.com/jinyihan99">GitHub</a>
+        </div>
+      </div>
+      <img class="portrait" src="images/new_profile.jpg" alt="Portrait of Jinyi Han" width="122" height="163">
+    </section>
 
-<hr>
+    <section id="news" aria-labelledby="news-title">
+      <div class="section-head">
+        <h2 id="news-title">News</h2>
+        <p class="section-note">Recent updates</p>
+      </div>
+      <ul class="news">
+        <li>
+          <time datetime="2026-08">2026.08</time>
+          <p>Released <a href="https://arxiv.org/abs/2608.04828"><strong>SKILL-USE</strong></a>, a benchmark for evaluating whether LLM agents can recognize and correctly apply skills.</p>
+        </li>
+        <li>
+          <time datetime="2026-05">2026.05</time>
+          <p>Joined <strong>Tencent TEG Hunyuan</strong> as a research intern, working on LLM agent evaluation.</p>
+        </li>
+        <li>
+          <time datetime="2026-05">2026.05</time>
+          <p>Two papers accepted at <strong>ACL 2026</strong> and one at <strong>ICML 2026</strong>.</p>
+        </li>
+        <li>
+          <time datetime="2026-04">2026.04</time>
+          <p><a href="https://github.com/lsdefine/GenericAgent"><strong>GenericAgent</strong></a> open-sourced and reached 13K+ GitHub stars.</p>
+        </li>
+        <li>
+          <time datetime="2026-04">2026.04</time>
+          <p>Attended <strong>ICLR 2026</strong> in Rio de Janeiro, Brazil.</p>
+        </li>
+        <li>
+          <time datetime="2026-02">2026.02</time>
+          <p>Three papers accepted at <strong>ICLR 2026</strong>.</p>
+        </li>
+        <li>
+          <time datetime="2025-05">2025.05</time>
+          <p><em>CDS</em> accepted at <strong>ACL 2025</strong>.</p>
+        </li>
+        <li>
+          <time datetime="2025-02">2025.02</time>
+          <p>Released a compact <a href="https://github.com/lsdefine/simple_GRPO">GRPO implementation</a>, now with 1.6K+ GitHub stars.</p>
+        </li>
+      </ul>
+    </section>
 
-<p>
-I am a third-year Ph.D. candidate at <strong>East China Normal University</strong>, working with <a href="https://scholar.google.com/citations?user=odFW4FoAAAAJ&hl=en&oi=ao">Prof. Yanghua Xiao</a> and <a href="https://lsdefine.github.io/">Dr. Jiaqing Liang</a> at <a href="http://kw.fudan.edu.cn/">Knowledge Works Lab</a> at <strong>Fudan University</strong>. 
-</p>
+    <section id="publications" aria-labelledby="publications-title">
+      <div class="section-head">
+        <h2 id="publications-title">Selected Publications</h2>
+        <p class="section-note">First author, then second author</p>
+      </div>
 
-<p>My research focuses on <strong>Large Language Models (LLMs)</strong>:</p>
-<ul>
-  <li><strong>Language Agents:</strong> Building agents with autonomous decision-making, continual learning, and long-horizon task execution capabilities, including self-evolution, skill distillation & reuse, agentic RL, and agent evaluation</li>
-  <li><strong>Reasoning Models:</strong> Enhancing complex reasoning and tool-use capabilities of LLMs, as well as reasoning efficiency optimization</li>
-  <li><strong>Post-Training:</strong> Exploring continual self-evolution, curriculum learning strategies, and reinforcement learning optimization to improve model performance</li>
-</ul>
+      <div class="pub-group">
+        <h3 class="pub-group-title">First Author</h3>
+        <div class="publication-list">
+          <article class="publication">
+            <div class="venue">
+              <span>Preprint</span>
+              <small>2026</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2608.04828">SKILL-USE: Can LLMs Actually Use Skills in Agentic Harnesses?</a></h3>
+              <p class="authors"><strong>Jinyi Han*</strong>, Yuanjian Xu*, Ying Liao, Xinyi Wang, Zishang Jiang, Zixiang Di, Fanyang Lu, Zhichao Hu, Yanghua Xiao</p>
+              <p class="contribution"><strong>Key contribution.</strong> Introduces SKILL-USE, a benchmark of 79 real skills and 177 executable tasks that evaluates Trigger, Compliance, and Boundary under progressive disclosure.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2608.04828">Paper</a><a href="https://github.com/JinyiHan99/Skill-Use-Bench">Code</a></span>
+              </p>
+            </div>
+          </article>
 
-<h2>💼 Internships</h2>
-<ul>
-  <li><em>2026.05 - Present</em>, LLM Agent Researcher, <strong>Tencent TEG Hunyuan</strong> <strong style="color: #0366d6;">(Qing Yun Program)</strong></li>
-  <li><em>2025.07 - 2026.04</em>, Multimodal LLM Algorithm Engineer, <strong>ByteDance</strong> <strong style="color: #0366d6;">(Jin Dou Yun Program)</strong></li>
-  <li><em>2023.09 - 2025.06</em>, LLM Reasoning & Agent Researcher, <strong>Knowledge Works Lab, Fudan University</strong></li>
-</ul>
+          <article class="publication">
+            <div class="venue">
+              <span>Preprint</span>
+              <small>2026</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2601.07180">Structured Reasoning for Large Language Models</a></h3>
+              <p class="authors"><strong>Jinyi Han</strong>, Zixiang Di, Zishang Jiang, Ying Liao, Jiaqing Liang, Yongqi Wang, Yanghua Xiao</p>
+              <p class="contribution"><strong>Key contribution.</strong> Decouples reasoning into generation, verification, and revision, with targeted supervision that improves self-verification and reduces redundant reasoning.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2601.07180">Paper</a></span>
+              </p>
+            </div>
+          </article>
 
-<h2>🔥 News</h2>
-<ul>
-  <li><em>2026.05</em>: 🏅 Joined <strong>Tencent TEG Hunyuan</strong> as a summer research intern, working on LLM agent evaluation.</li>
-  <li><em>2026.05</em>: 🎉🎉 Two papers accepted at <strong>ACL 2026</strong> and one at <strong>ICML 2026</strong>!</li>
-  <li><em>2026.04</em>: 🌟 <a href="https://github.com/lsdefine/GenericAgent">GenericAgent</a> open-sourced with <strong>13K+ Stars</strong>! [<a href="https://arxiv.org/abs/2604.17091">Technical Report</a>]</li>
-  <li><em>2026.04</em>: 🇧🇷 Attending <strong>ICLR 2026</strong> in Rio de Janeiro, Brazil. Feel free to say hi!</li>
-  <li><em>2026.02</em>: 🎉🎉🎉 Three papers accepted at <strong>ICLR 2026</strong>!</li>
-  <li><em>2025.05</em>: 🎉 <em>CDS</em> accepted at <strong>ACL 2025</strong>.</li>
-  <li><em>2025.04</em>: Released autonomous tool learning for LLMs via RL. [<a href="https://mp.weixin.qq.com/s/hjPf68M5qciZBc3zczctYQ">Report</a>]</li>
-  <li><em>2025.02</em>: Released GRPO on <a href="https://github.com/lsdefine/simple_GRPO">GitHub</a>, <strong>1.6K Stars</strong>. [<a href="https://mp.weixin.qq.com/s/hFArGyWTRTkQIMeStg279w">Report</a>]</li>
-  <li><em>2025.01</em>: 🎉 <em>Think Thrice Before You Act</em> accepted at <strong>ICLR 2025</strong>.</li>
-  <li><em>2023.12</em>: 🎉 <em>Small Language Model Can Self-correct</em> accepted at <strong>AAAI 2024</strong>.</li>
-</ul>
+          <article class="publication">
+            <div class="venue">
+              <span>ICLR 2026</span>
+              <small>2025</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2509.23392">Your Models Have Thought Enough: Training Large Reasoning Models to Stop Overthinking</a></h3>
+              <p class="authors"><strong>Jinyi Han</strong>, Ying Huang, Ying Liao, Zishang Jiang, Xikun Lu, Haiquan Zhao, Xinyi Wang, et al.</p>
+              <p class="contribution"><strong>Key contribution.</strong> Proposes JET, which uses truncated rollouts and a quality-controlled length reward to teach reasoning models when to stop without sacrificing accuracy.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2509.23392">Paper</a><a href="https://github.com/JinyiHan99/Just-Enough-Think/">Code</a></span>
+              </p>
+            </div>
+          </article>
 
-<h2>📝 Selected Publications</h2>
-<p class="section-note">Full list on <a href="https://scholar.google.com/">Google Scholar</a>. * Equal contribution. Formerly known as Haixia Han.</p>
+          <article class="publication">
+            <div class="venue">
+              <span>ICLR 2026</span>
+              <small>2025</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2508.12903">A Stitch in Time Saves Nine: Proactive Self-Refinement for Language Models</a></h3>
+              <p class="authors"><strong>Jinyi Han</strong>, Xinyi Wang, Haiquan Zhao, Tingyun Li, Zishang Jiang, Sihang Jiang, et al.</p>
+              <p class="contribution"><strong>Key contribution.</strong> Proposes PASR, enabling a model to decide whether, when, and how to refine its output during generation rather than repeatedly rewriting the full response.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2508.12903">Paper</a><a href="https://github.com/JinyiHan99/Proactive-Self-Refine-in-LLMs/">Code</a></span>
+              </p>
+            </div>
+          </article>
 
-<h3>Language Agents</h3>
+          <article class="publication">
+            <div class="venue">
+              <span>Preprint</span>
+              <small>2025</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2508.12040">Mind the Generation Process: Fine-Grained Confidence Estimation During LLM Generation</a></h3>
+              <p class="authors"><strong>Jinyi Han</strong>, Tingyun Li, Shisong Chen, Jie Shi, Xinyi Wang, Guanglei Yue, et al.</p>
+              <p class="contribution"><strong>Key contribution.</strong> Introduces FineCE for continuous, fine-grained confidence estimation during text generation, including backward confidence integration at inference time.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2508.12040">Paper</a></span>
+              </p>
+            </div>
+          </article>
 
-<div class="pub-item">
-  <span class="venue">[Preprint]</span> <span class="title">GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization.</span><br>
-  <span class="authors">Jiaqing Liang, <strong>Jinyi Han</strong>, Weijia Li, Xinyi Wang, Zhoujia Zhang, Zishang Jiang, et al. 2026.</span><br>
-  <span class="meta">[<a href="https://github.com/lsdefine/GenericAgent">GitHub <strong>13K+ Stars</strong></a>] [<a href="https://arxiv.org/abs/2604.17091">Paper</a>]</span>
-</div>
+          <article class="publication">
+            <div class="venue">
+              <span>AAAI 2024</span>
+              <small>2024</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2401.07301">Small Language Model Can Self-correct</a></h3>
+              <p class="authors"><strong>Haixia Han (Jinyi Han)</strong>, Jiaqing Liang, Jie Shi, Qianyu He, Yanghua Xiao</p>
+              <p class="contribution"><strong>Key contribution.</strong> Builds intrinsic self-correction data with Partial Answer Masking, enabling small language models to trigger and perform correction without complex prompts.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2401.07301">Paper</a></span>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
 
-<div class="pub-item">
-  <span class="venue">[Under Review]</span> <span class="title">From Instruction Following to Skill Following: A Process-Oriented Benchmark for LLM Agents.</span><br>
-  <span class="authors"><strong>Jinyi Han</strong>, Yuanjian Xu, Ying Liao, Zhichao Hu, Yanghua Xiao. 2026. (@ Tencent Hunyuan)</span>
-</div>
+      <div class="pub-group">
+        <h3 class="pub-group-title">Second Author</h3>
+        <div class="publication-list">
+          <article class="publication">
+            <div class="venue">
+              <span>Preprint</span>
+              <small>2026</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2604.17091">GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization</a></h3>
+              <p class="authors">Jiaqing Liang, <strong>Jinyi Han</strong>, Weijia Li, Xinyi Wang, Zhoujia Zhang, Zishang Jiang, et al.</p>
+              <p class="contribution"><strong>Key contribution.</strong> Maximizes decision-relevant information within a fixed context through compact tools, hierarchical memory, experience-to-skill evolution, and context compression.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2604.17091">Paper</a><a href="https://github.com/lsdefine/GenericAgent">Code</a></span>
+              </p>
+            </div>
+          </article>
 
-<div class="pub-item">
-  <span class="venue">[ICML 2026]</span> <span class="title">From Outcomes to Actions: Leveraging Hindsight for Long-Horizon Language Agent Training.</span><br>
-  <span class="authors">Zishang Jiang, Tingyun Li, <strong>Jinyi Han</strong>, Xinyi Wang, et al.</span>
-</div>
+          <article class="publication">
+            <div class="venue">
+              <span>Preprint</span>
+              <small>2026</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2602.03516">Not All Negative Samples Are Equal: LLMs Learn Better from Plausible Reasoning</a></h3>
+              <p class="authors">Zixiang Di, <strong>Jinyi Han</strong>, Shuo Zhang, Ying Liao, Zhi Li, Xiaofeng Ji, et al.</p>
+              <p class="contribution"><strong>Key contribution.</strong> Synthesizes plausible but ultimately incorrect reasoning traces as higher-quality negative data for preference optimization.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2602.03516">Paper</a></span>
+              </p>
+            </div>
+          </article>
 
-<div class="pub-item">
-  <span class="venue">[ACL 2026]</span> <span class="title">SOPFlow: Compiling Standard Operating Procedures into Repairable Executable Workflows.</span><br>
-  <span class="authors">Ying Liao, Ying Huang, <strong>Jinyi Han</strong>, Siyuan He, Jiaqing Liang, Yanghua Xiao.</span>
-</div>
+          <article class="publication">
+            <div class="venue">
+              <span>ACL 2026</span>
+              <small>2025</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2510.09388">Don't Tell the Answer, Truly Guide the Reasoning During RL Rollouts</a></h3>
+              <p class="authors">Xinyi Wang, <strong>Jinyi Han</strong>, Zishang Jiang, Tingyun Li, Jiaqing Liang, Sihang Jiang, et al.</p>
+              <p class="contribution"><strong>Key contribution.</strong> Uses abstract meta-hints and affinity-aware policy optimization to guide difficult RL rollouts while avoiding answer leakage and unstable off-policy updates.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2510.09388">Paper</a></span>
+              </p>
+            </div>
+          </article>
 
-<h3>Reasoning Models</h3>
+          <article class="publication">
+            <div class="venue">
+              <span>ICLR 2026</span>
+              <small>2025</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2510.04140">Selective Expert Guidance for Effective and Diverse Exploration in Reinforcement Learning of LLMs</a></h3>
+              <p class="authors">Zishang Jiang, <strong>Jinyi Han</strong>, Tingyun Li, Xinyi Wang, Sihang Jiang, Jiaqing Liang, et al.</p>
+              <p class="contribution"><strong>Key contribution.</strong> Proposes MENTOR, which injects expert guidance only at critical decision points to preserve both effective and diverse exploration in RLVR.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2510.04140">Paper</a></span>
+              </p>
+            </div>
+          </article>
 
-<div class="pub-item">
-  <span class="venue">[ICLR 2026]</span> <span class="title">A Stitch in Time Saves Nine: Proactive Self-Refinement for Language Models.</span><br>
-  <span class="authors"><strong>Jinyi Han</strong>, Xinyi Wang, Haiquan Zhao, Tingyun Li, et al.</span>
-</div>
+          <article class="publication">
+            <div class="venue">
+              <span>AAAI 2026</span>
+              <small>2026</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/40400">Difficulty Is Not Enough: Curriculum Learning for LLMs Fine-tuning Must Consider Utility</a></h3>
+              <p class="authors">Zishang Jiang, <strong>Jinyi Han</strong>, Tingyun Li, Xinyi Wang, Sihang Jiang, Xiaojun Meng, et al.</p>
+              <p class="contribution"><strong>Key contribution.</strong> Introduces DUCL, a curriculum framework that jointly scores sample difficulty and utility and schedules data with window ordering.
+                <span class="paper-links"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/40400">Paper</a></span>
+              </p>
+            </div>
+          </article>
 
-<div class="pub-item">
-  <span class="venue">[ICLR 2026]</span> <span class="title">Your Models Have Thought Enough: Training Large Reasoning Models to Stop Overthinking.</span><br>
-  <span class="authors"><strong>Jinyi Han</strong>, Ying Huang, Ying Liao, Haiquan Zhao, et al.</span>
-</div>
+          <article class="publication">
+            <div class="venue">
+              <span>ACL 2025</span>
+              <small>2025</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2501.07674">CDS: Data Synthesis Method Guided by Cognitive Diagnosis Theory</a></h3>
+              <p class="authors">Haokun Zhao, <strong>Jinyi Han</strong>, Jiaqing Liang, Yanghua Xiao</p>
+              <p class="contribution"><strong>Key contribution.</strong> Applies cognitive diagnosis to identify fine-grained model weaknesses and synthesize targeted training data for those knowledge points.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2501.07674">Paper</a></span>
+              </p>
+            </div>
+          </article>
 
-<div class="pub-item">
-  <span class="venue">[Under Review]</span> <span class="title">Structured Reasoning for Large Language Models.</span><br>
-  <span class="authors"><strong>Jinyi Han</strong>, Zixiang Di, Zishang Jiang, et al. 2026. (@ ByteDance)</span>
-</div>
+          <article class="publication">
+            <div class="venue">
+              <span>ICLR 2025</span>
+              <small>2024</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2410.13413">Think Thrice Before You Act: Progressive Thought Refinement in Large Language Models</a></h3>
+              <p class="authors">Chengyu Du, <strong>Jinyi Han</strong>, Yizhou Ying, Aili Chen, Qianyu He, Haokun Zhao, et al.</p>
+              <p class="contribution"><strong>Key contribution.</strong> Proposes progressive thought refinement with collaborative data selection and thought-mask fine-tuning to improve responses across diverse tasks.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2410.13413">Paper</a></span>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
 
-<div class="pub-item">
-  <span class="venue">[AAAI 2024]</span> <span class="title">Small Language Model Can Self-correct.</span><br>
-  <span class="authors"><strong>Haixia Han</strong>, Jiaqing Liang, Jie Shi, Qianyu He, Yanghua Xiao.</span>
-</div>
+      <p class="publication-footnote">* Equal contribution. Only selected first- and second-author work is shown. See the <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&amp;hl=en">full publication list</a>.</p>
+    </section>
 
-<div class="pub-item">
-  <span class="venue">[ICLR 2025]</span> <span class="title">Think Thrice Before You Act: Progressive Thought Refinement in Large Language Models.</span><br>
-  <span class="authors">Chengyu Du, <strong>Jinyi Han</strong>, Yizhou Ying, et al.</span>
-</div>
+    <section id="internships" aria-labelledby="internships-title">
+      <div class="section-head">
+        <h2 id="internships-title">Internships</h2>
+      </div>
+      <div class="internship-list">
+        <article class="internship">
+          <div class="company-logo">
+            <img src="images/tencent.png" alt="Tencent logo" width="268" height="52">
+          </div>
+          <div>
+            <h3>LLM Agent Researcher</h3>
+            <p class="company">Tencent TEG Hunyuan · <span class="program">Qing Yun Program</span></p>
+          </div>
+          <div class="period">May 2026 - Present</div>
+        </article>
+        <article class="internship">
+          <div class="company-logo">
+            <img src="images/bytedance.png" alt="ByteDance logo" width="196" height="64">
+          </div>
+          <div>
+            <h3>Multimodal LLM Algorithm Engineer</h3>
+            <p class="company">ByteDance · <span class="program">Jin Dou Yun Program</span></p>
+          </div>
+          <div class="period">Jul 2025 - Apr 2026</div>
+        </article>
+        <article class="internship">
+          <div class="company-logo kw">
+            <img src="images/knowledge-works.png" alt="Knowledge Works Lab logo" width="72" height="76">
+          </div>
+          <div>
+            <h3>LLM Reasoning &amp; Agent Researcher</h3>
+            <p class="company">Knowledge Works Lab · Fudan University</p>
+          </div>
+          <div class="period">Sep 2023 - Present</div>
+        </article>
+      </div>
+    </section>
 
-<div class="pub-item">
-  <span class="venue">[ACL 2026]</span> <span class="title">ADaPT: Token-Level Decoupling for Efficient Large Reasoning Models.</span><br>
-  <span class="authors">Tingyun Li, Zishang Jiang, <strong>Jinyi Han</strong>, et al.</span>
-</div>
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="section-head">
+        <h2 id="projects-title">Projects</h2>
+      </div>
+      <ul class="project-list">
+        <li>
+          <strong>GenericAgent</strong>
+          <span>Token-efficient, self-evolving agent for long-horizon tasks · 13.6K+ stars</span>
+          <a href="https://github.com/lsdefine/GenericAgent">GitHub</a>
+        </li>
+        <li>
+          <strong>Autonomous Tool Learning</strong>
+          <span>Reinforcement learning for proactive LLM tool use</span>
+          <a href="https://mp.weixin.qq.com/s/hjPf68M5qciZBc3zczctYQ">Report</a>
+        </li>
+        <li>
+          <strong>Simple GRPO</strong>
+          <span>A compact R1-Zero reasoning reproduction · 1.6K+ stars</span>
+          <a href="https://github.com/lsdefine/simple_GRPO">GitHub</a>
+        </li>
+      </ul>
+    </section>
 
-<h3>Post-Training</h3>
+    <section id="background" aria-labelledby="background-title">
+      <div class="section-head">
+        <h2 id="background-title">Background</h2>
+      </div>
+      <div class="background-grid">
+        <div>
+          <h3>Education</h3>
+          <ul class="plain-list">
+            <li>
+              <strong>Ph.D. in Computer Science</strong>
+              <span>East China Normal University · Joint with Fudan University · 2023-2027 (expected)</span>
+            </li>
+            <li>
+              <strong>M.S. in Computer Science</strong>
+              <span>Donghua University · 2020-2023</span>
+            </li>
+            <li>
+              <strong>B.S. in Computer Science</strong>
+              <span>Henan University of Economics and Law · 2016-2020</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Selected Honors</h3>
+          <ul class="plain-list">
+            <li><strong>Huawei Spark Award</strong><span>2024, 2025</span></li>
+            <li><strong>Outstanding Graduate of Shanghai</strong><span>Top 5% · 2023</span></li>
+            <li><strong>Outstanding Master's Thesis</strong><span>Donghua University · Top 3% · 2023</span></li>
+            <li><strong>Outstanding Bachelor's Thesis</strong><span>Henan Province · Top 3% · 2021</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<div class="pub-item">
-  <span class="venue">[ICLR 2026]</span> <span class="title">Selective Expert Guidance for Effective and Diverse Exploration in Reinforcement Learning of LLMs.</span><br>
-  <span class="authors">Zishang Jiang, <strong>Jinyi Han</strong>, Tingyun Li, et al.</span>
-</div>
-
-<div class="pub-item">
-  <span class="venue">[ACL 2025]</span> <span class="title">CDS: Data Synthesis Method Guided by Cognitive Diagnosis Theory.</span><br>
-  <span class="authors">Haokun Zhao, <strong>Jinyi Han</strong>, Jiaqing Liang, et al.</span>
-</div>
-
-<div class="pub-item">
-  <span class="venue">[AAAI 2025, Oral]</span> <span class="title">Difficulty Is Not Enough: Curriculum Learning for LLMs Fine-tuning Must Consider Utility.</span><br>
-  <span class="authors">Zishang Jiang, <strong>Jinyi Han</strong>, Tingyun Li, et al.</span>
-</div>
-
-<div class="pub-item">
-  <span class="venue">[Under Review]</span> <span class="title">Not All Negative Samples Are Equal: LLMs Learn Better from Plausible Reasoning.</span><br>
-  <span class="authors">Zixiang Di*, <strong>Jinyi Han</strong>*, et al. 2026. (@ ByteDance)</span>
-</div>
-
-<div class="pub-item">
-  <span class="venue">[ACL 2026]</span> <span class="title">Don't Tell the Answer, Truly Guide the Reasoning During RL Rollouts.</span><br>
-  <span class="authors">Xinyi Wang, <strong>Jinyi Han</strong>, Zishang Jiang, et al.</span>
-</div>
-
-<div class="pub-item">
-  <span class="venue">[Under Review]</span> <span class="title">Knowing How Certain It Is: Confidence Estimation Throughout LLM Generation.</span><br>
-  <span class="authors"><strong>Jinyi Han</strong>, Tingyun Li, Shisong Chen, et al. 2026.</span>
-</div>
-
-<h2>📂 Projects</h2>
-<ul>
-  <li><strong>GenericAgent</strong> · Self-evolving LLM Agent, <strong>13K+ Stars</strong> · [<a href="https://github.com/lsdefine/GenericAgent">GitHub</a>] [<a href="https://arxiv.org/abs/2604.17091">Paper</a>]</li>
-  <li><strong>Autonomous Tool Learning for LLMs</strong> · RL-based proactive tool-use · [<a href="https://mp.weixin.qq.com/s/hjPf68M5qciZBc3zczctYQ">Report</a>]</li>
-  <li><strong>R1-Zero Reproduction (GRPO)</strong> · <strong>1.6K Stars</strong> · [<a href="https://mp.weixin.qq.com/s/hFArGyWTRTkQIMeStg279w">Report</a>] [<a href="https://github.com/lsdefine/simple_GRPO">GitHub</a>]</li>
-</ul>
-
-<h2>🎓 Educations</h2>
-<ul>
-  <li><em>2023.09 - 2027.06 (Expected)</em>, Ph.D. in Computer Science, <strong>East China Normal University</strong> (Joint w/ Fudan)</li>
-  <li><em>2020.09 - 2023.03</em>, M.S. in Computer Science, <strong>Donghua University</strong></li>
-  <li><em>2016.09 - 2020.06</em>, B.S. in Computer Science, <strong>Henan University of Economics and Law</strong></li>
-</ul>
-
-
-
-<h2>🏆 Honors and Awards</h2>
-<ul>
-  <li><em>2024, 2025</em> Huawei Spark Award</li>
-  <li><em>2023</em> Outstanding Graduate of Shanghai (Top 5%)</li>
-  <li><em>2023</em> Outstanding Master's Thesis, Donghua University (Top 3%)</li>
-  <li><em>2021</em> Outstanding Bachelor's Thesis, Henan Province (Top 3%)</li>
-  <li><em>2020 - 2022</em> Academic Scholarship First Prize</li>
-</ul>
-
-<hr>
-<p style="text-align: center; font-size: 0.9em; color: #666;">© 2026 Jinyi Han</p>
-
+  <footer>
+    <span>© 2026 Jinyi Han</span>
+    <span>Last updated August 2026</span>
+  </footer>
 </body>
 </html>

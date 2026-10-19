@@ -149,6 +149,12 @@
       font-weight: 680;
     }
 
+    .job-market {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font-weight: 680;
+    }
+
     .profile-links {
       display: flex;
       flex-wrap: wrap;
@@ -332,6 +338,7 @@
 
     .paper-title {
       margin: 0 0 2px;
+      color: var(--ink);
       font-family: Georgia, "Times New Roman", "Songti SC", serif;
       font-size: 0.91rem;
       font-weight: 700;
@@ -613,9 +620,10 @@
       <div>
         <h1 id="page-title">Jinyi Han <span>韩槿一</span></h1>
         <p class="role">Ph.D. candidate at East China Normal University · Shanghai, China</p>
-        <p class="intro">I am a third-year Ph.D. candidate advised by <a href="https://scholar.google.com/citations?user=odFW4FoAAAAJ&amp;hl=en&amp;oi=ao">Prof. Yanghua Xiao</a>. I also work with <a href="https://lsdefine.github.io/">Dr. Jiaqing Liang</a> at the <a href="http://kw.fudan.edu.cn/">Knowledge Works Lab</a>, Fudan University.</p>
+        <p class="intro">I am a fourth-year Ph.D. candidate advised by <a href="https://scholar.google.com/citations?user=odFW4FoAAAAJ&amp;hl=en&amp;oi=ao">Prof. Yanghua Xiao</a>. I also work with <a href="https://lsdefine.github.io/">Dr. Jiaqing Liang</a> at the <a href="http://kw.fudan.edu.cn/">Knowledge Works Lab</a>, Fudan University.</p>
         <p class="research-line">My research focuses on <strong>language agents</strong>, <strong>reasoning models</strong>, and <strong>LLM post-training</strong>, with an emphasis on self-evolution, tool use, reasoning efficiency, and reinforcement learning.</p>
         <p class="talent-line">Selected for <strong>Tencent 2026 Project UP</strong> and the <strong>ByteDance Soaring Star Talent Program</strong>.</p>
+        <p class="job-market">I am currently exploring job opportunities in both industry and academia. Feel free to reach out by email.</p>
         <div class="profile-links" aria-label="Profile links">
           <a href="mailto:jinyihan099@gmail.com">Email</a>
           <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&amp;hl=en">Google Scholar</a>
@@ -671,19 +679,19 @@
       <ul class="news">
         <li>
           <time datetime="2026-08">2026.08</time>
-          <p>Released <a href="https://arxiv.org/abs/2608.04828"><strong>SKILL-USE</strong></a>, a benchmark for evaluating whether LLM agents can recognize and correctly apply skills.</p>
+          <p>Excited to release <a href="https://arxiv.org/abs/2608.04828"><strong>SKILL-USE</strong></a> 🚀, a benchmark that asks whether LLM agents can recognize and correctly apply skills.</p>
         </li>
         <li>
           <time datetime="2026-05">2026.05</time>
-          <p>Joined <strong>Tencent TEG Hunyuan</strong> as a research intern, working on LLM agent evaluation.</p>
+          <p>Joined <strong>Tencent TEG Hunyuan</strong> as a research intern 🤖, working on LLM agent evaluation.</p>
         </li>
         <li>
           <time datetime="2026-05">2026.05</time>
-          <p>Two papers accepted at <strong>ACL 2026</strong> and one at <strong>ICML 2026</strong>.</p>
+          <p>Two papers accepted at <strong>ACL 2026</strong> and one at <strong>ICML 2026</strong> 🎉.</p>
         </li>
         <li>
           <time datetime="2026-04">2026.04</time>
-          <p><a href="https://github.com/lsdefine/GenericAgent"><strong>GenericAgent</strong></a> open-sourced and reached 13K+ GitHub stars.</p>
+          <p><a href="https://github.com/lsdefine/GenericAgent"><strong>GenericAgent</strong></a> is open-sourced and has passed 13K stars on GitHub ⭐</p>
         </li>
         <li>
           <time datetime="2026-04">2026.04</time>
@@ -691,7 +699,7 @@
         </li>
         <li>
           <time datetime="2026-02">2026.02</time>
-          <p>Three papers accepted at <strong>ICLR 2026</strong>.</p>
+          <p>Three papers accepted at <strong>ICLR 2026</strong>, a good start to the year.</p>
         </li>
         <li>
           <time datetime="2025-05">2025.05</time>
@@ -699,7 +707,7 @@
         </li>
         <li>
           <time datetime="2025-02">2025.02</time>
-          <p>Released a compact <a href="https://github.com/lsdefine/simple_GRPO">GRPO implementation</a>, now with 1.6K+ GitHub stars.</p>
+          <p>Released a compact <a href="https://github.com/lsdefine/simple_GRPO">GRPO implementation</a>, now at 1.6K+ stars ⭐</p>
         </li>
       </ul>
     </section>
@@ -707,12 +715,14 @@
     <section id="publications" aria-labelledby="publications-title">
       <div class="section-head">
         <h2 id="publications-title">Selected Publications</h2>
-        <p class="section-note">First author, then second author</p>
+        <p class="section-note">First-author and co-authored papers</p>
       </div>
 
       <div class="pub-group">
         <h3 class="pub-group-title">First Author</h3>
         <div class="publication-list">
+          
+
           <article class="publication">
             <div class="venue">
               <span>Preprint</span>
@@ -810,12 +820,29 @@
               </p>
             </div>
           </article>
+
+
+          <article class="publication">
+            <div class="venue">
+              <span>Preprint</span>
+              <small>2026</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2610.21624">AgentPerturb: Evaluating LLM Agent Robustness under Controlled Interaction Perturbations</a></h3>
+              <p class="authors">Yuanjian Xu*, <strong>Jinyi Han*</strong>, Jianing Hao, Yuxuan Sun, Fanyang Lu, Richeng Xuan, Guang Zhang, Zhichao Hu</p>
+              <p class="contribution"><strong>Key contribution.</strong> Introduces NoiseBench, a paired evaluation framework spanning four agent-input sources and three noise types. Experiments on APEX-Agents and Toolathlon reveal unverified error propagation and increased computational costs under noise.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2610.21624">Paper</a></span>
+              </p>
+            </div>
+          </article>
+
         </div>
       </div>
 
       <div class="pub-group">
-        <h3 class="pub-group-title">Second Author</h3>
+        <h3 class="pub-group-title">Co-authored</h3>
         <div class="publication-list">
+         
           <article class="publication">
             <div class="venue">
               <span>Preprint</span>
@@ -872,6 +899,51 @@
             </div>
           </article>
 
+           <article class="publication">
+            <div class="venue">
+              <span>ICML 2026</span>
+              <small>2026</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://arxiv.org/abs/2607.16257">From Outcomes to Actions: Leveraging Hindsight for Long-Horizon Language Agent Training</a></h3>
+              <p class="authors">Zishang Jiang, Tingyun Li, <strong>Jinyi Han</strong>, Xinyi Wang, Sihang Jiang, Yizhou Ying, et al.</p>
+              <p class="contribution"><strong>Key contribution.</strong> Proposes Hindsight Policy Optimization, using Wasserstein distance in an intent space to derive low-variance learning signals for long-horizon agent training.
+                <span class="paper-links"><a href="https://arxiv.org/abs/2607.16257">Paper</a></span>
+              </p>
+            </div>
+          </article>
+
+          <article class="publication">
+            <div class="venue">
+              <span>ACL 2026</span>
+              <small>Findings · 2026</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://aclanthology.org/2026.findings-acl.165/">ADaPT: Token-Level Decoupling for Efficient Large Reasoning Models</a></h3>
+              <p class="authors">Tingyun Li, Zishang Jiang, <strong>Jinyi Han</strong>, Xinyi Wang, Sihang Jiang, Han Xia, et al.</p>
+              <p class="contribution"><strong>Key contribution.</strong> Decouples efficiency and correctness rewards through a fast/slow mode-selection token, preserving reasoning quality while enabling continuous inference-time control of the efficiency–performance trade-off.
+                <span class="paper-links"><a href="https://aclanthology.org/2026.findings-acl.165/">Paper</a></span>
+              </p>
+            </div>
+          </article>
+
+
+          <article class="publication">
+            <div class="venue">
+              <span>CIKM 2025</span>
+              <small>2025</small>
+            </div>
+            <div>
+              <h3 class="paper-title"><a href="https://doi.org/10.1145/3746252.3761096">CEM: A Data-Efficient Method for Large Language Models to Continue Evolving From Mistakes</a></h3>
+              <p class="authors">Haokun Zhao, <strong>Jinyi Han</strong>, Jie Shi, Chengyu Du, Jiaqing Liang, Yanghua Xiao, et al.</p>
+              <p class="contribution"><strong>Key contribution.</strong> Collects mistake-relevant knowledge through iterative evaluation and combines continual instruction tuning with pre-training to improve data efficiency and mitigate forgetting.
+                <span class="paper-links"><a href="https://doi.org/10.1145/3746252.3761096">Paper</a></span>
+              </p>
+            </div>
+          </article>
+
+          
+
           <article class="publication">
             <div class="venue">
               <span>ACL 2025</span>
@@ -899,10 +971,13 @@
               </p>
             </div>
           </article>
+
+      
+
         </div>
       </div>
 
-      <p class="publication-footnote">* Equal contribution. Only selected first- and second-author work is shown. See the <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&amp;hl=en">full publication list</a>.</p>
+      <p class="publication-footnote">* Equal contribution. Only selected work is shown. See the <a href="https://scholar.google.com/citations?user=r2NcI24AAAAJ&amp;hl=en">full publication list</a>.</p>
     </section>
 
     <section id="projects" aria-labelledby="projects-title">
@@ -965,7 +1040,7 @@
 
   <footer>
     <span>© 2026 Jinyi Han</span>
-    <span>Last updated August 2026</span>
+    <span>Last updated October 2026</span>
   </footer>
 </body>
 </html>
